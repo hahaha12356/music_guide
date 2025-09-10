@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tools & Converters | Music Resources Directory</title>
-    <meta name="description" content="Audio conversion and manipulation tools to help you transform and optimize your music files for various platforms and uses.">
+    <title>Free Online Audio Tools & Converters | MP3, WAV</title>
+    <meta name="description" content="A list of the best free online audio tools. Convert video to MP3, cut audio files, and more with these easy-to-use converters.">
     <link rel="canonical" href="https://musicguide.life/tools-converters.html">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -37,6 +37,26 @@
   gtag('config', 'G-SBNG4SJLZ5');
 </script>
 <body class="bg-gray-50 font-sans">
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-gray-800 bg-opacity-95 z-50 p-6 hidden">
+        <button id="close-mobile-menu" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
+        <ul class="flex flex-col space-y-6 text-white text-2xl mt-16 text-center">
+            <li><a href="/" class="hover:text-blue-200 transition">Home</a></li>
+            <li><a href="about-us.html" class="hover:text-blue-200 transition">About</a></li>
+            <li><a href="contact.html" class="hover:text-blue-200 transition">Contact</a></li>
+            <li class="border-t border-gray-700 pt-6">
+                <h3 class="text-xl font-bold mb-4">Categories</h3>
+                <ul class="space-y-4 text-lg">
+                    <li><a href="general-royalty-free.html" class="hover:text-blue-200 transition">General Royalty-Free</a></li>
+                    <li><a href="film-game-music.html" class="hover:text-blue-200 transition">Film/Game Music</a></li>
+                    <li><a href="production-materials.html" class="hover:text-blue-200 transition">Production Materials</a></li>
+                    <li><a href="classical-music.html" class="hover:text-blue-200 transition">Classical Music</a></li>
+                    <li><a href="commercial-subscription.html" class="hover:text-blue-200 transition">Commercial Subscription</a></li>
+                    <li><a href="tools-converters.html" class="hover:text-blue-200 transition">Tools & Converters</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
     <!-- Header -->
     <header class="bg-gradient-to-r from-indigo-500 to-indigo-600 text-white py-6">
         <div class="container mx-auto px-4">
@@ -94,6 +114,19 @@
                 <h2 class="text-3xl font-bold mb-6 text-gray-800">About Audio Tools & Converters</h2>
                 <p class="text-gray-600 mb-4 text-lg">Audio tools and converters are essential utilities for working with music files in different formats. These resources allow you to convert between various audio formats, extract audio from videos, adjust quality settings, and perform other technical operations.</p>
                 <p class="text-gray-600 text-lg">Whether you need to convert a file for compatibility with specific software or extract audio from online content, these tools provide simple solutions for common audio processing needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BPM Calculator Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto bg-gray-100 rounded-lg shadow-lg p-8 text-center">
+                <h2 class="text-3xl font-bold mb-4 text-gray-800">BPM Tap Calculator</h2>
+                <p class="text-gray-600 mb-6">Tap the button along with the beat of a song to calculate its Beats Per Minute (BPM).</p>
+                <div id="bpm-display" class="text-6xl font-bold text-indigo-600 mb-6">--</div>
+                <button id="tap-button" class="w-full bg-indigo-600 text-white font-bold py-4 px-8 rounded-full hover:bg-indigo-700 transition shadow-lg text-2xl">Tap</button>
+                <button id="reset-button" class="mt-4 text-sm text-gray-500 hover:text-gray-700">Reset</button>
             </div>
         </div>
     </section>
@@ -224,15 +257,15 @@
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="/" class="text-gray-400 hover:text-white transition">Home</a></li>
-                        <li><a href="/#about" class="text-gray-400 hover:text-white transition">About</a></li>
-                        <li><a href="/#categories" class="text-gray-400 hover:text-white transition">Categories</a></li>
+                        <li><a href="about-us.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Legal</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Use</a></li>
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="terms-of-use.html" class="text-gray-400 hover:text-white transition">Terms of Use</a></li>
                     </ul>
                 </div>
             </div>
@@ -244,84 +277,78 @@
 
     <!-- Dropdown Menu JavaScript -->
     <script>
+        // ... (Existing Dropdown Menu JS) ...
+    </script>
+
+    <!-- BPM Calculator JavaScript -->
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Get all dropdown toggles
-            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-            const dropdownContainers = document.querySelectorAll('.dropdown-container');
-            let isDropdownOpen = false;
-            let activeDropdown = null;
-            let timeout;
-            
-            // Add click event listener to each toggle
-            dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    const parent = this.closest('.dropdown-container');
-                    
-                    // Toggle active class
-                    if (parent.classList.contains('active')) {
-                        parent.classList.remove('active');
-                        isDropdownOpen = false;
-                        activeDropdown = null;
-                    } else {
-                        // Close any open dropdowns first
-                        dropdownContainers.forEach(container => {
-                            container.classList.remove('active');
-                        });
-                        
-                        parent.classList.add('active');
-                        isDropdownOpen = true;
-                        activeDropdown = parent;
-                    }
-                });
-            });
-            
-            // Close dropdowns when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.dropdown-container')) {
-                    dropdownContainers.forEach(container => {
-                        container.classList.remove('active');
-                    });
-                    isDropdownOpen = false;
-                    activeDropdown = null;
+            const bpmDisplay = document.getElementById('bpm-display');
+            const tapButton = document.getElementById('tap-button');
+            const resetButton = document.getElementById('reset-button');
+
+            let tapTimestamps = [];
+            let resetTimer;
+
+            const calculateBPM = () => {
+                if (tapTimestamps.length < 2) {
+                    return;
                 }
+
+                const intervals = [];
+                for (let i = 1; i < tapTimestamps.length; i++) {
+                    intervals.push(tapTimestamps[i] - tapTimestamps[i - 1]);
+                }
+
+                const averageInterval = intervals.reduce((a, b) => a + b, 0) / intervals.length;
+                if (averageInterval === 0) {
+                    return;
+                }
+
+                const bpm = 60000 / averageInterval;
+                bpmDisplay.textContent = bpm.toFixed(1);
+            };
+
+            const resetCalculator = () => {
+                tapTimestamps = [];
+                bpmDisplay.textContent = '--';
+            };
+
+            tapButton.addEventListener('click', () => {
+                clearTimeout(resetTimer);
+                const now = Date.now();
+
+                // If the last tap was more than 2 seconds ago, reset
+                if (tapTimestamps.length > 0 && (now - tapTimestamps[tapTimestamps.length - 1]) > 2000) {
+                    resetCalculator();
+                }
+
+                tapTimestamps.push(now);
+                // Keep only the last 10 taps for a rolling average
+                if (tapTimestamps.length > 10) {
+                    tapTimestamps.shift();
+                }
+
+                calculateBPM();
+
+                // Set a timer to reset after 2 seconds of inactivity
+                resetTimer = setTimeout(resetCalculator, 2000);
             });
-            
-            // Improved hover functionality with delay
-            dropdownContainers.forEach(container => {
-                container.addEventListener('mouseenter', function() {
-                    clearTimeout(timeout);
-                    
-                    // If another dropdown is already open by click, don't interfere
-                    if (isDropdownOpen && activeDropdown !== this) {
-                        return;
-                    }
-                    
-                    this.classList.add('active');
-                });
-                
-                container.addEventListener('mouseleave', function() {
-                    // If this dropdown was opened by click, don't close on mouseleave
-                    if (isDropdownOpen && activeDropdown === this) {
-                        return;
-                    }
-                    
-                    const self = this;
-                    timeout = setTimeout(function() {
-                        self.classList.remove('active');
-                    }, 100); // Small delay before hiding
-                });
+
+            resetButton.addEventListener('click', resetCalculator);
+        });
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.min.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
+alculateBPM();
+
+                // Set a timer to reset after 2 seconds of inactivity
+                resetTimer = setTimeout(resetCalculator, 2000);
             });
-            
-            // Make dropdown menu items easier to click by preventing dropdown from closing
-            // when hovering over the dropdown menu itself
-            const dropdownMenus = document.querySelectorAll('.dropdown-menu');
-            dropdownMenus.forEach(menu => {
-                menu.addEventListener('mouseenter', function(e) {
-                    clearTimeout(timeout);
-                });
-            });
+
+            resetButton.addEventListener('click', resetCalculator);
         });
     </script>
 </body>

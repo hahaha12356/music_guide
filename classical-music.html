@@ -37,6 +37,26 @@
   gtag('config', 'G-SBNG4SJLZ5');
 </script>
 <body class="bg-gray-50 font-sans">
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-gray-800 bg-opacity-95 z-50 p-6 hidden">
+        <button id="close-mobile-menu" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
+        <ul class="flex flex-col space-y-6 text-white text-2xl mt-16 text-center">
+            <li><a href="/" class="hover:text-blue-200 transition">Home</a></li>
+            <li><a href="about-us.html" class="hover:text-blue-200 transition">About</a></li>
+            <li><a href="contact.html" class="hover:text-blue-200 transition">Contact</a></li>
+            <li class="border-t border-gray-700 pt-6">
+                <h3 class="text-xl font-bold mb-4">Categories</h3>
+                <ul class="space-y-4 text-lg">
+                    <li><a href="general-royalty-free.html" class="hover:text-blue-200 transition">General Royalty-Free</a></li>
+                    <li><a href="film-game-music.html" class="hover:text-blue-200 transition">Film/Game Music</a></li>
+                    <li><a href="production-materials.html" class="hover:text-blue-200 transition">Production Materials</a></li>
+                    <li><a href="classical-music.html" class="hover:text-blue-200 transition">Classical Music</a></li>
+                    <li><a href="commercial-subscription.html" class="hover:text-blue-200 transition">Commercial Subscription</a></li>
+                    <li><a href="tools-converters.html" class="hover:text-blue-200 transition">Tools & Converters</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
     <!-- Header -->
     <header class="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white py-6">
         <div class="container mx-auto px-4">
@@ -45,7 +65,8 @@
                 <nav>
                     <ul class="flex space-x-6 items-center">
                         <li><a href="/" class="hover:text-blue-200 transition">Home</a></li>
-                        <li><a href="/#about" class="hover:text-blue-200 transition">About</a></li>
+                        <li><a href="about-us.html" class="hover:text-blue-200 transition">About</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-200 transition">Contact</a></li>
                         <li class="relative dropdown-container">
                             <button class="flex items-center hover:text-blue-200 transition dropdown-toggle">
                                 Categories <i class="fas fa-chevron-down ml-1 text-xs"></i>
@@ -73,199 +94,128 @@
                                 </div>
                             </div>
                         </li>
+                        <li>
+                            <div id="search-icon" class="hover:text-blue-200 transition cursor-pointer">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- Category Header -->
-    <section class="py-16 bg-gradient-to-b from-yellow-600 to-yellow-500 text-white text-center">
-        <div class="container mx-auto px-4">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Classical Music Resources</h1>
-            <p class="text-xl max-w-3xl mx-auto">Explore public domain classical music, free sheet music downloads, and high-quality recordings of timeless masterpieces.</p>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main class="bg-white">
+        <article class="container mx-auto px-4 py-12">
 
-    <!-- Introduction -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-6 text-gray-800">About Classical Music Resources</h2>
-                <p class="text-gray-600 mb-4 text-lg">Classical music represents centuries of musical tradition and artistic expression. Many classical compositions have entered the public domain, making them freely available for listening, performing, and studying.</p>
-                <p class="text-gray-600 text-lg">These resources provide access to sheet music, recordings, and educational materials related to classical music from various periods and composers.</p>
-            </div>
-        </div>
-    </section>
+            <!-- Article Header -->
+            <header class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">A Beginner's Guide to Classical Music</h1>
+                <p class="text-xl text-gray-500">Explore public domain masterpieces, find free sheet music, and discover high-quality recordings.</p>
+            </header>
 
-    <!-- Resources List -->
-    <section class="py-12 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Featured Resources</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8 max-w-5xl mx-auto">
-                <!-- Resource 1 -->
-                <div class="resource-card bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="p-6">
-                        <div class="flex flex-col lg:flex-row">
-                            <div class="lg:w-1/4 mb-4 lg:mb-0 flex items-center justify-center">
-                                <div class="w-24 h-24 rounded-full bg-yellow-100 flex items-center justify-center">
-                                    <i class="fas fa-music text-yellow-500 text-4xl"></i>
-                                </div>
-                            </div>
-                            <div class="lg:w-3/4 lg:pl-6">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h3 class="text-2xl font-bold text-gray-800">Musopen</h3>
-                                    <a href="https://musopen.org" target="_blank" class="text-yellow-500 hover:text-yellow-700">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                                <div class="mb-4">
-                                    <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">public domain classical music</span>
-                                    <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">free sheet music downloads</span>
-                                    <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">violin concertos mp3</span>
-                                </div>
-                                <div class="mb-6">
-                                    <p class="text-gray-600"><strong>Musopen</strong> is dedicated to providing access to <strong>public domain classical music</strong>. You can find <strong>free sheet music downloads</strong> and listen to recordings, including beautiful <strong>violin concertos in mp3</strong> format.</p>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-bold text-gray-800 mb-2">How to Use:</h4>
-                                    <p class="text-gray-600">Navigate to the <strong>Musopen</strong> website and explore their library of <strong>public domain classical music</strong>. You can listen to tracks online, <strong>download free sheet music</strong>, or download music files, such as <strong>violin concertos mp3</strong>, for your personal use.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Resource 2 -->
-                <div class="resource-card bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="p-6">
-                        <div class="flex flex-col lg:flex-row">
-                            <div class="lg:w-1/4 mb-4 lg:mb-0 flex items-center justify-center">
-                                <div class="w-24 h-24 rounded-full bg-yellow-100 flex items-center justify-center">
-                                    <i class="fas fa-play text-yellow-500 text-4xl"></i>
-                                </div>
-                            </div>
-                            <div class="lg:w-3/4 lg:pl-6">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h3 class="text-2xl font-bold text-gray-800">Classical Music Only</h3>
-                                    <a href="https://classicalmusiconly.com" target="_blank" class="text-yellow-500 hover:text-yellow-700">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                                <div class="mb-4">
-                                    <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">classical music streaming</span>
-                                    <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">best classical recordings</span>
-                                    <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">high-fidelity audio downloads</span>
-                                </div>
-                                <div class="mb-6">
-                                    <p class="text-gray-600"><strong>Classical Music Only</strong> is your destination for enjoying the finest works of classical composers. Experience <strong>classical music streaming</strong> of the <strong>best classical recordings</strong> available, often with <strong>high-fidelity audio downloads</strong>.</p>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-bold text-gray-800 mb-2">How to Use:</h4>
-                                    <p class="text-gray-600">Visit the <strong>Classical Music Only</strong> website and start browsing their collection. Enjoy <strong>classical music streaming</strong> directly on the site. Look for options to download <strong>high-fidelity audio</strong> versions of your favorite <strong>classical recordings</strong>.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Resource 3 -->
-                <div class="resource-card bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="p-6">
-                        <div class="flex flex-col lg:flex-row">
-                            <div class="lg:w-1/4 mb-4 lg:mb-0 flex items-center justify-center">
-                                <div class="w-24 h-24 rounded-full bg-yellow-100 flex items-center justify-center">
-                                    <i class="fas fa-video text-yellow-500 text-4xl"></i>
-                                </div>
-                            </div>
-                            <div class="lg:w-3/4 lg:pl-6">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h3 class="text-2xl font-bold text-gray-800">Berlin Philharmonic</h3>
-                                    <a href="https://www.digitalconcerthall.com" target="_blank" class="text-yellow-500 hover:text-yellow-700">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                                <div class="mb-4">
-                                    <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">Berlin Philharmonic live streams</span>
-                                    <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">HD classical concert videos</span>
-                                    <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">orchestral performances</span>
-                                </div>
-                                <div class="mb-6">
-                                    <p class="text-gray-600">Experience world-class <strong>orchestral performances</strong> with the <strong>Berlin Philharmonic</strong>. Their platform offers <strong>Berlin Philharmonic live streams</strong> and a vast archive of <strong>HD classical concert videos</strong> for classical music enthusiasts.</p>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-bold text-gray-800 mb-2">How to Use:</h4>
-                                    <p class="text-gray-600">Go to the <strong>Berlin Philharmonic</strong>'s Digital Concert Hall website. Explore their subscription options to access <strong>Berlin Philharmonic live streams</strong> and their extensive library of <strong>HD classical concert videos</strong>. Enjoy stunning recordings of their <strong>orchestral performances</strong>.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Resource 4 -->
-                <div class="resource-card bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="p-6">
-                        <div class="flex flex-col lg:flex-row">
-                            <div class="lg:w-1/4 mb-4 lg:mb-0 flex items-center justify-center">
-                                <div class="w-24 h-24 rounded-full bg-yellow-100 flex items-center justify-center">
-                                    <i class="fas fa-file-alt text-yellow-500 text-4xl"></i>
-                                </div>
-                            </div>
-                            <div class="lg:w-3/4 lg:pl-6">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h3 class="text-2xl font-bold text-gray-800">8notes</h3>
-                                    <a href="https://www.8notes.com" target="_blank" class="text-yellow-500 hover:text-yellow-700">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                                <div class="mb-4">
-                                    <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">free sheet music piano</span>
-                                    <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">music theory lessons</span>
-                                    <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">classical guitar tabs</span>
-                                </div>
-                                <div class="mb-6">
-                                    <p class="text-gray-600"><strong>8notes</strong> is a comprehensive resource for musicians, offering <strong>free sheet music for piano</strong>, valuable <strong>music theory lessons</strong>, and a wide variety of instrumental tabs, including <strong>classical guitar tabs</strong>.</p>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-bold text-gray-800 mb-2">How to Use:</h4>
-                                    <p class="text-gray-600">Visit the <strong>8notes</strong> website and browse their extensive collection of <strong>free sheet music</strong>, particularly for <strong>piano</strong>. Take advantage of their <strong>music theory lessons</strong> to improve your understanding. You can also find <strong>classical guitar tabs</strong> and sheet music for other instruments.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <!-- Introduction Section -->
+            <section class="max-w-4xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">What is Classical Music?</h2>
+                <p class="text-gray-700 mb-4 text-lg leading-relaxed">Classical music represents centuries of artistic tradition, from the intricate compositions of the Baroque period to the emotional depth of the Romantic era. Many of these timeless works have entered the public domain, making them freely available for listening, performing, and academic study. This guide is designed to help you navigate this rich world and find high-quality, legal resources.</p>
+                <p class="text-gray-700 text-lg leading-relaxed">Whether you're a student, a content creator looking for the perfect soundtrack, or simply a curious listener, the resources below provide access to sheet music, recordings, and educational materials from various periods and composers.</p>
+            </section>
 
-    <!-- Tips Section -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold mb-8 text-gray-800">Tips for Using Classical Music Resources</h2>
-                
-                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-5 mb-6 rounded">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Understand Historical Context</h3>
-                    <p class="text-gray-600">Learning about the historical period and circumstances in which a piece was composed can greatly enhance your appreciation and interpretation of classical music.</p>
+            <!-- Resources Section -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Featured Classical Music Resources</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+                    <!-- Resource 1: Musopen -->
+                    <div class="resource-card bg-gray-50 rounded-lg overflow-hidden shadow-md p-6 border-l-4 border-yellow-500">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-gray-800">Musopen</h3>
+                            <a href="https://musopen.org" target="_blank" class="text-yellow-500 hover:text-yellow-700"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <p class="text-gray-600 mb-4">A non-profit focused on setting music free. Find public domain recordings, sheet music, and educational materials.</p>
+                        <div class="mb-4">
+                            <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">Public Domain</span>
+                            <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">Sheet Music</span>
+                            <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">MP3 Downloads</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mt-4 mb-2">How to Use:</h4>
+                        <p class="text-gray-600">Search for composers or specific works. You can listen online, download audio files, or print sheet music for practice and performance.</p>
+                    </div>
+
+                    <!-- Resource 2: Classical Music Only -->
+                    <div class="resource-card bg-gray-50 rounded-lg overflow-hidden shadow-md p-6 border-l-4 border-yellow-500">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-gray-800">Classical Music Only</h3>
+                            <a href="https://classicalmusiconly.com" target="_blank" class="text-yellow-500 hover:text-yellow-700"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <p class="text-gray-600 mb-4">A great place for streaming high-quality classical recordings, curated by enthusiasts.</p>
+                        <div class="mb-4">
+                            <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">Streaming</span>
+                            <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">Curated Playlists</span>
+                            <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">Hi-Fi Audio</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mt-4 mb-2">How to Use:</h4>
+                        <p class="text-gray-600">Visit the site and browse their collection. Excellent for focused listening and discovering new interpretations of famous works.</p>
+                    </div>
+
+                    <!-- Resource 3: Berlin Philharmonic -->
+                    <div class="resource-card bg-gray-50 rounded-lg overflow-hidden shadow-md p-6 border-l-4 border-yellow-500">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-gray-800">Berlin Philharmonic</h3>
+                            <a href="https://www.digitalconcerthall.com" target="_blank" class="text-yellow-500 hover:text-yellow-700"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <p class="text-gray-600 mb-4">The Digital Concert Hall offers live streams and an extensive archive of HD concert videos.</p>
+                        <div class="mb-4">
+                            <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">Live Streams</span>
+                            <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">HD Video</span>
+                            <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">Orchestral</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mt-4 mb-2">How to Use:</h4>
+                        <p class="text-gray-600">Requires a subscription but offers unparalleled access to world-class orchestral performances. A must for serious enthusiasts.</p>
+                    </div>
+
+                    <!-- Resource 4: 8notes -->
+                    <div class="resource-card bg-gray-50 rounded-lg overflow-hidden shadow-md p-6 border-l-4 border-yellow-500">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-gray-800">8notes</h3>
+                            <a href="https://www.8notes.com" target="_blank" class="text-yellow-500 hover:text-yellow-700"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <p class="text-gray-600 mb-4">A fantastic resource for musicians, offering free sheet music for various instruments, plus theory lessons.</p>
+                        <div class="mb-4">
+                            <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">Sheet Music</span>
+                            <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">Music Theory</span>
+                            <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mr-2 mb-2">Guitar Tabs</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mt-4 mb-2">How to Use:</h4>
+                        <p class="text-gray-600">An excellent site for finding free sheet music for piano, violin, and more. Their theory lessons are also a great learning tool.</p>
+                    </div>
                 </div>
-                
-                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-5 mb-6 rounded">
+            </section>
+
+            <!-- Tips Section -->
+            <section class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-gray-800">Tips for Exploring Classical Music</h2>
+                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Start with the Greats</h3>
+                    <p class="text-gray-700">If you're new to the genre, start with well-known composers like Mozart, Beethoven, or Bach. Their work is accessible and provides a great foundation.</p>
+                </div>
+                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6 rounded-lg">
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Compare Different Performances</h3>
-                    <p class="text-gray-600">Listen to multiple recordings of the same piece by different performers to appreciate the various interpretations and nuances that each artist brings to the music.</p>
+                    <p class="text-gray-700">Listen to multiple recordings of the same piece by different orchestras or soloists. You'll be amazed at the different interpretations and nuances each artist brings.</p>
                 </div>
-                
-                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-5 rounded">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Start with Accessible Works</h3>
-                    <p class="text-gray-600">If you're new to classical music, begin with more accessible and popular works before diving into more complex compositions. This can help build your appreciation gradually.</p>
+                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Learn the Historical Context</h3>
+                    <p class="text-gray-700">Understanding the era in which a piece was composed can dramatically enhance your appreciation. Was it a time of revolution, romance, or rigid structure? This context adds incredible depth to the listening experience.</p>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
+
+        </article>
+    </main>
 
     <!-- Back to Categories Button -->
     <section class="py-10 bg-gray-50 text-center">
-        <a href="/#categories" class="btn-primary inline-block" style="background-color: var(--apple-yellow);">
+        <a href="/" class="bg-yellow-500 text-white font-bold py-3 px-8 rounded-full hover:bg-yellow-600 transition shadow-lg">
             <i class="fas fa-arrow-left mr-2"></i> Back to All Categories
         </a>
     </section>
@@ -282,15 +232,15 @@
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="/" class="text-gray-400 hover:text-white transition">Home</a></li>
-                        <li><a href="/#about" class="text-gray-400 hover:text-white transition">About</a></li>
-                        <li><a href="/#categories" class="text-gray-400 hover:text-white transition">Categories</a></li>
+                        <li><a href="about-us.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Legal</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Use</a></li>
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="terms-of-use.html" class="text-gray-400 hover:text-white transition">Terms of Use</a></li>
                     </ul>
                 </div>
             </div>
@@ -382,5 +332,7 @@
             });
         });
     </script>
+    <script src="https://unpkg.com/lunr/lunr.min.js"></script>
+    <script src="search.js"></script>
 </body>
 </html>

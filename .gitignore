@@ -1,0 +1,23 @@
+# Ignore markdown files
+*.md
+
+# Ignore PDF files
+*.pdf
+
+# Ignore Excel files
+*.xlsx
+*.xls
+
+# Ignore common development and OS files
+.DS_Store
+Thumbs.db
+*~
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore Node.js dependencies
+/node_modules/
