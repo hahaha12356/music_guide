@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeModalButton = document.getElementById('close-modal-button');
     const resultsContainer = document.getElementById('search-results-container');
 
+    // If this page doesn't include the search UI, exit gracefully
+    if (!searchIcon || !searchBar || !searchInput || !modal || !closeModalButton || !resultsContainer) {
+        return;
+    }
+
     let idx, store;
 
     // Fetch the search index

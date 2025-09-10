@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Online Audio Tools & Converters | MP3, WAV</title>
-    <meta name="description" content="A list of the best free online audio tools. Convert video to MP3, cut audio files, and more with these easy-to-use converters.">
+    <title>Tools & Converters – Free Audio Tools (MP3, WAV) | BPM Tap Tempo Calculator</title>
+    <meta name="description" content="Free online audio tools and converters, plus an accurate BPM Tap Tempo Calculator. Tap along to find song tempo (BPM) with keyboard support and tempo guidance.">
     <meta name="google-adsense-account" content="ca-pub-5822023555398041">
     <link rel="canonical" href="https://musicguide.life/tools-converters.html">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -26,6 +26,15 @@
         .dropdown-container {
             position: relative;
         }
+        /* Tap visual feedback */
+        @keyframes tap-bounce {
+            0% { transform: scale(1); }
+            35% { transform: scale(1.06); }
+            100% { transform: scale(1); }
+        }
+        .tap-pressed { animation: tap-bounce 180ms ease-out; }
+        /* Smooth color transition for BPM */
+        #bpm-display { transition: color .2s ease; }
     </style>
 </head>
 <!-- Google tag (gtag.js) -->
@@ -127,11 +136,27 @@
     <section class="py-12 bg-white">
         <div class="container mx-auto px-4">
             <div class="max-w-2xl mx-auto bg-gray-100 rounded-lg shadow-lg p-8 text-center">
-                <h2 class="text-3xl font-bold mb-4 text-gray-800">BPM Tap Calculator</h2>
-                <p class="text-gray-600 mb-6">Tap the button along with the beat of a song to calculate its Beats Per Minute (BPM).</p>
-                <div id="bpm-display" class="text-6xl font-bold text-indigo-600 mb-6">--</div>
+                <h2 class="text-3xl font-bold mb-2 text-gray-800">BPM Tap Tempo Calculator</h2>
+                <p class="text-gray-600">Step 1: Play your music • Step 2: Tap at least 4 times • Step 3: Read your BPM</p>
+                <p class="text-xs text-gray-500 mb-6">Tip: You can press Space or Enter to tap. The result averages your last 4–8 taps for a more stable reading.</p>
+                <div id="bpm-display" class="text-6xl font-bold text-indigo-600 mb-2" aria-live="polite" aria-atomic="true">--</div>
+                <div id="tempo-label" class="text-sm text-gray-600 mb-1">Tap to begin</div>
+                <div id="tap-status" class="text-xs text-gray-500 mb-4">Tap at least 4 times for an accurate reading.</div>
                 <button id="tap-button" class="w-full bg-indigo-600 text-white font-bold py-4 px-8 rounded-full hover:bg-indigo-700 transition shadow-lg text-2xl">Tap</button>
-                <button id="reset-button" class="mt-4 text-sm text-gray-500 hover:text-gray-700">Reset</button>
+                <div class="flex items-center justify-between mt-4">
+                    <button id="reset-button" class="text-sm text-gray-500 hover:text-gray-700">Reset</button>
+                    <div class="text-xs text-gray-500 text-left">Common tempos: <span class="font-medium">60–80</span> Slow • <span class="font-medium">100–130</span> Pop • <span class="font-medium">120–140</span> Dance</div>
+                </div>
+                <div class="mt-4 border-t border-gray-200 pt-4 text-left">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <button id="save-result" class="px-3 py-2 text-sm bg-white border rounded hover:bg-gray-50">Save</button>
+                        <button id="copy-current" class="px-3 py-2 text-sm bg-white border rounded hover:bg-gray-50">Copy</button>
+                        <button id="copy-all" class="px-3 py-2 text-sm bg-white border rounded hover:bg-gray-50 opacity-50 cursor-not-allowed" disabled>Copy All</button>
+                        <button id="clear-saved" class="px-3 py-2 text-sm text-gray-500 hover:text-gray-700 opacity-50 cursor-not-allowed" disabled>Clear</button>
+                        <span id="save-copy-status" class="text-xs text-green-600 ml-2 hidden" aria-live="polite"></span>
+                    </div>
+                    <ul id="saved-list" class="mt-3 space-y-2 max-h-40 overflow-auto"></ul>
+                </div>
             </div>
         </div>
     </section>
@@ -282,7 +307,50 @@
 
     <!-- Dropdown Menu JavaScript -->
     <script>
-        // ... (Existing Dropdown Menu JS) ...
+        document.addEventListener('DOMContentLoaded', () => {
+            // Dropdown in header
+            const dropdownContainers = document.querySelectorAll('.dropdown-container');
+            dropdownContainers.forEach(container => {
+                const toggle = container.querySelector('.dropdown-toggle');
+                const menu = container.querySelector('.dropdown-menu');
+                if (!toggle || !menu) return;
+
+                const closeAll = () => {
+                    dropdownContainers.forEach(c => c.classList.remove('active'));
+                };
+
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isActive = container.classList.contains('active');
+                    closeAll();
+                    if (!isActive) container.classList.add('active');
+                });
+
+                // Close on outside click
+                document.addEventListener('click', () => closeAll());
+                // Close on Escape
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') closeAll();
+                });
+            });
+
+            // Mobile menu
+            const mobileMenu = document.getElementById('mobile-menu');
+            const openMobileBtn = document.getElementById('open-mobile-menu');
+            const closeMobileBtn = document.getElementById('close-mobile-menu');
+
+            const openMobileMenu = () => {
+                if (!mobileMenu) return;
+                mobileMenu.classList.remove('hidden');
+            };
+            const closeMobileMenu = () => {
+                if (!mobileMenu) return;
+                mobileMenu.classList.add('hidden');
+            };
+
+            if (openMobileBtn) openMobileBtn.addEventListener('click', openMobileMenu);
+            if (closeMobileBtn) closeMobileBtn.addEventListener('click', closeMobileMenu);
+        });
     </script>
 
     <!-- BPM Calculator JavaScript -->
@@ -291,13 +359,34 @@
             const bpmDisplay = document.getElementById('bpm-display');
             const tapButton = document.getElementById('tap-button');
             const resetButton = document.getElementById('reset-button');
+            const tapStatus = document.getElementById('tap-status');
+            const tempoLabel = document.getElementById('tempo-label');
 
             let tapTimestamps = [];
             let resetTimer;
+            let lastBPM = null;
+
+            const getTempoCategory = (bpm) => {
+                if (!bpm || !isFinite(bpm)) return 'Tap to begin';
+                if (bpm < 60) return 'Very slow (Largo)';
+                if (bpm < 76) return 'Slow (Adagio)';
+                if (bpm < 108) return 'Moderate (Andante/Moderato)';
+                if (bpm < 132) return 'Moderate-Fast (Allegretto / Pop)';
+                if (bpm < 168) return 'Fast (Allegro / Dance)';
+                if (bpm < 200) return 'Very fast (Presto)';
+                return 'Extremely fast';
+            };
+
+            const updateBpmColor = (bpm) => {
+                if (!bpm || !isFinite(bpm)) { bpmDisplay.style.color = '#4f46e5'; return; }
+                if (bpm < 80) bpmDisplay.style.color = '#10b981'; // green-ish for slow
+                else if (bpm <= 130) bpmDisplay.style.color = '#4f46e5'; // indigo for mid
+                else bpmDisplay.style.color = '#ef4444'; // red for fast
+            };
 
             const calculateBPM = () => {
                 if (tapTimestamps.length < 2) {
-                    return;
+                    return null;
                 }
 
                 const intervals = [];
@@ -305,56 +394,234 @@
                     intervals.push(tapTimestamps[i] - tapTimestamps[i - 1]);
                 }
 
-                const averageInterval = intervals.reduce((a, b) => a + b, 0) / intervals.length;
-                if (averageInterval === 0) {
+                // Use last 4 to 8 intervals for stability
+                const maxIntervals = 8;
+                const minIntervals = 4;
+                const recent = intervals.slice(-maxIntervals);
+                if (recent.length < 1) return null;
+
+                // If more than minIntervals, only keep last N to avoid drift
+                const used = recent.length >= minIntervals ? recent.slice(-Math.max(minIntervals, Math.min(recent.length, maxIntervals))) : recent;
+                const averageInterval = used.reduce((a, b) => a + b, 0) / used.length;
+                if (!averageInterval) return null;
+
+                return 60000 / averageInterval;
+            };
+
+            const smoothUpdateDisplay = (newBpm) => {
+                if (newBpm == null || !isFinite(newBpm)) {
+                    bpmDisplay.textContent = '--';
+                    tempoLabel.textContent = 'Tap to begin';
+                    updateBpmColor(null);
                     return;
                 }
-
-                const bpm = 60000 / averageInterval;
-                bpmDisplay.textContent = bpm.toFixed(1);
+                // Round to one decimal for stability
+                const target = parseFloat(newBpm.toFixed(1));
+                bpmDisplay.textContent = target.toFixed(1);
+                tempoLabel.textContent = getTempoCategory(target);
+                updateBpmColor(target);
             };
 
-            const resetCalculator = () => {
-                tapTimestamps = [];
-                bpmDisplay.textContent = '--';
+            const updateTapStatus = () => {
+                const taps = tapTimestamps.length;
+                if (taps < 2) {
+                    tapStatus.textContent = 'Keep tapping… (≥4 taps improves accuracy)';
+                } else if (taps < 4) {
+                    tapStatus.textContent = `${taps} taps captured – add a few more for stability.`;
+                } else if (taps < 8) {
+                    tapStatus.textContent = `${taps} taps captured – stable reading.`;
+                } else {
+                    tapStatus.textContent = `Using last 8 taps for rolling average.`;
+                }
             };
 
-            tapButton.addEventListener('click', () => {
+            const doTap = () => {
                 clearTimeout(resetTimer);
                 const now = Date.now();
 
                 // If the last tap was more than 2 seconds ago, reset
-                if (tapTimestamps.length > 0 && (now - tapTimestamps[tapTimestamps.length - 1]) > 2000) {
+                if (tapTimestamps.length > 0 && (now - tapTimestamps[tapTimestamps[tapTimestamps.length - 1]]) > 2000) {
                     resetCalculator();
                 }
 
                 tapTimestamps.push(now);
-                // Keep only the last 10 taps for a rolling average
-                if (tapTimestamps.length > 10) {
+                // Keep only the last 9 taps (which gives up to 8 intervals)
+                if (tapTimestamps.length > 9) {
                     tapTimestamps.shift();
                 }
 
-                calculateBPM();
+                // Visual feedback on button
+                tapButton.classList.remove('tap-pressed');
+                // force reflow to restart animation
+                void tapButton.offsetWidth;
+                tapButton.classList.add('tap-pressed');
 
-                // Set a timer to reset after 2 seconds of inactivity
-                resetTimer = setTimeout(resetCalculator, 2000);
-            });
+                const bpm = calculateBPM();
+                if (bpm) lastBPM = bpm;
+                smoothUpdateDisplay(bpm ?? lastBPM);
+                updateTapStatus();
 
+                // Set a timer to reset after 2.5 seconds of inactivity
+                resetTimer = setTimeout(() => {
+                    resetCalculator();
+                }, 2500);
+            };
+
+            const resetCalculator = () => {
+                tapTimestamps = [];
+                lastBPM = null;
+                bpmDisplay.textContent = '--';
+                tempoLabel.textContent = 'Tap to begin';
+                updateBpmColor(null);
+                tapStatus.textContent = 'Tap at least 4 times for an accurate reading.';
+            };
+
+            tapButton.addEventListener('click', doTap);
             resetButton.addEventListener('click', resetCalculator);
+
+            // Keyboard support: Space or Enter to tap, R to reset
+            window.addEventListener('keydown', (e) => {
+                if (e.code === 'Space' || e.code === 'Enter') {
+                    e.preventDefault();
+                    doTap();
+                } else if (e.key.toLowerCase() === 'r') {
+                    resetCalculator();
+                }
+            });
         });
     </script>
     <script src="https://unpkg.com/lunr/lunr.min.js"></script>
-    <script src="search.js"></script>
-</body>
-</html>
-alculateBPM();
-
-                // Set a timer to reset after 2 seconds of inactivity
-                resetTimer = setTimeout(resetCalculator, 2000);
-            });
-
-            resetButton.addEventListener('click', resetCalculator);
-        });
-    </script>
-</body>
-</html>
+     <script src="search.js"></script>
+     <script>
+     document.addEventListener('DOMContentLoaded', function() {
+         const savedList = document.getElementById('saved-list');
+         const saveBtn = document.getElementById('save-result');
+         const copyCurrentBtn = document.getElementById('copy-current');
+         const copyAllBtn = document.getElementById('copy-all');
+         const clearSavedBtn = document.getElementById('clear-saved');
+         const saveCopyStatus = document.getElementById('save-copy-status');
+         const bpmDisplay = document.getElementById('bpm-display');
+         const tempoLabel = document.getElementById('tempo-label');
+ 
+         let savedItems = [];
+ 
+         const updateSavedControls = () => {
+             const hasItems = savedItems.length > 0;
+             copyAllBtn.disabled = !hasItems;
+             clearSavedBtn.disabled = !hasItems;
+             copyAllBtn.classList.toggle('opacity-50', !hasItems);
+             copyAllBtn.classList.toggle('cursor-not-allowed', !hasItems);
+             clearSavedBtn.classList.toggle('opacity-50', !hasItems);
+             clearSavedBtn.classList.toggle('cursor-not-allowed', !hasItems);
+         };
+ 
+         const renderSavedList = () => {
+             savedList.innerHTML = '';
+             savedItems.forEach((item, index) => {
+                 const li = document.createElement('li');
+                 li.className = 'flex items-center justify-between bg-white rounded border px-3 py-2';
+                 const left = document.createElement('div');
+                 left.className = 'text-sm';
+                 left.textContent = `${item.bpm} BPM${item.label ? ' • ' + item.label : ''}`;
+                 const right = document.createElement('div');
+                 right.className = 'flex items-center gap-2';
+                 const copyBtn = document.createElement('button');
+                 copyBtn.className = 'text-xs px-2 py-1 bg-gray-50 border rounded hover:bg-gray-100';
+                 copyBtn.textContent = 'Copy';
+                 copyBtn.addEventListener('click', async () => {
+                     try {
+                         await navigator.clipboard.writeText(`${item.bpm} BPM${item.label ? ' • ' + item.label : ''}`);
+                         showStatus('Copied');
+                     } catch { showStatus('Copy failed'); }
+                 });
+                 const delBtn = document.createElement('button');
+                 delBtn.className = 'text-xs text-red-600 hover:text-red-700';
+                 delBtn.textContent = 'Delete';
+                 delBtn.addEventListener('click', () => {
+                     savedItems.splice(index, 1);
+                     renderSavedList();
+                     updateSavedControls();
+                 });
+                 right.appendChild(copyBtn);
+                 right.appendChild(delBtn);
+                 li.appendChild(left);
+                 li.appendChild(right);
+                 savedList.appendChild(li);
+             });
+         };
+ 
+         const showStatus = (msg) => {
+             saveCopyStatus.textContent = msg;
+             saveCopyStatus.classList.remove('hidden');
+             clearTimeout(saveCopyStatus._t);
+             saveCopyStatus._t = setTimeout(() => {
+                 saveCopyStatus.classList.add('hidden');
+             }, 1400);
+         };
+ 
+         const getCurrentBpmText = () => {
+             const txt = bpmDisplay.textContent.trim();
+             if (!txt || txt === '--') return null;
+             const bpm = Number(txt);
+             if (!isFinite(bpm)) return null;
+             const label = tempoLabel.textContent.trim();
+             return { bpm: bpm % 1 === 0 ? bpm.toFixed(0) : bpm.toFixed(1), label };
+         };
+ 
+         saveBtn.addEventListener('click', () => {
+             const current = getCurrentBpmText();
+             if (!current) { showStatus('No BPM yet'); return; }
+             savedItems.push(current);
+             renderSavedList();
+             updateSavedControls();
+             showStatus('Saved');
+         });
+ 
+         copyCurrentBtn.addEventListener('click', async () => {
+             const current = getCurrentBpmText();
+             if (!current) { showStatus('No BPM yet'); return; }
+             try {
+                 await navigator.clipboard.writeText(`${current.bpm} BPM${current.label ? ' • ' + current.label : ''}`);
+                 showStatus('Copied');
+             } catch { showStatus('Copy failed'); }
+         });
+ 
+         copyAllBtn.addEventListener('click', async () => {
+             if (savedItems.length === 0) return;
+             const joined = savedItems.map(i => `${i.bpm} BPM${i.label ? ' • ' + i.label : ''}`).join('\n');
+             try {
+                 await navigator.clipboard.writeText(joined);
+                 showStatus('Copied All');
+             } catch { showStatus('Copy failed'); }
+         });
+ 
+         clearSavedBtn.addEventListener('click', () => {
+             if (savedItems.length === 0) return;
+             savedItems = [];
+             renderSavedList();
+             updateSavedControls();
+             showStatus('Cleared');
+         });
+ 
+         // Keyboard helpers: Ctrl+S save, Ctrl+C copy current when focus on page
+         window.addEventListener('keydown', async (e) => {
+             if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
+                 e.preventDefault();
+                 saveBtn.click();
+             } else if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'c') {
+                 const current = getCurrentBpmText();
+                 if (current) {
+                     e.preventDefault();
+                     try {
+                         await navigator.clipboard.writeText(`${current.bpm} BPM${current.label ? ' • ' + current.label : ''}`);
+                         showStatus('Copied');
+                     } catch { showStatus('Copy failed'); }
+                 }
+             }
+         });
+ 
+         updateSavedControls();
+     });
+     </script>
+ </body>
+ </html>
