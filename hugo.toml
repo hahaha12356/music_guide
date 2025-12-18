@@ -1,0 +1,81 @@
+baseURL = 'https://musicguide.life/'
+languageCode = 'en-us'
+title = 'MusicGuide.life'
+theme = 'PaperMod'
+
+enableRobotsTXT = true
+
+# 启用 JSON 输出以支持搜索功能
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[params]
+    description = "Rhythm of Gaming - Your ultimate guide to game soundtracks, Roblox IDs, and FNF mods."
+    author = "MusicGuide Team"
+    defaultTheme = "auto" # 跟随系统配色
+    
+    # 界面设置
+    ShowReadingTime = true
+    ShowShareButtons = true
+    ShowPostNavLinks = true
+    ShowBreadCrumbs = true
+    ShowCodeCopyButtons = true
+    ShowWordCount = true
+
+    # 首页配置 (Profile Mode) - 如果想要列表模式，可删除 profileMode 块
+    [params.profileMode]
+        enabled = false
+        title = "MusicGuide.life"
+        subtitle = "Rhythm of Gaming - Your ultimate guide to game soundtracks, Roblox IDs, and FNF mods."
+        imageUrl = "<link-to-your-image>"
+        imageTitle = "MusicGuide"
+        imageWidth = 120
+        imageHeight = 120
+
+    # 搜索配置 (Fuse.js)
+    [params.fuseOpts]
+        isCaseSensitive = false
+        shouldSort = true
+        location = 0
+        distance = 1000
+        threshold = 0.4
+        minMatchCharLength = 0
+        keys = ["title", "permalink", "summary", "content"]
+
+# 菜单配置
+[[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+
+[[menu.main]]
+    identifier = "roblox"
+    name = "Roblox Codes"
+    url = "/roblox-codes/"
+    weight = 20
+
+[[menu.main]]
+    identifier = "fnf"
+    name = "FNF Mods"
+    url = "/fnf-mods/"
+    weight = 30
+
+[[menu.main]]
+    identifier = "soundtracks"
+    name = "Soundtracks"
+    url = "/soundtracks/"
+    weight = 40
+
+[[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 50
+
+# 搜索菜单项 (必须配合 search.md 使用)
+[[menu.main]]
+    identifier = "search"
+    name = "🔍 Search"
+    url = "/search/"
+    weight = 60
