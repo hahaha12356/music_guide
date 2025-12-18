@@ -4,10 +4,12 @@ date: 2025-12-18
 draft: false
 categories: ["Roblox"]
 tags: ["Gaming", "Music", "Roblox", "Song IDs"]
+description: "Learn How to Find Any Roblox Song ID in 3 simple steps. Updated 2025 guide to searching the Creator Marketplace and finding working music codes yourself."
 ---
 
 ![Roblox player searching for song ID codes tutorial](/images/find-roblox-id.jpg)
-**Introduction**
+
+## Introduction
 
 We have all been there. You are chilling in *Catalog Avatar Creator* or vibing in *Brookhaven*, and suddenly, someone blasts an absolute banger from their boombox. You ask for the code, and they just run away or ignore you. It is incredibly frustrating. With the Roblox audio library update in 2025 making search a bit chaotic, finding the exact track you want can feel like searching for a needle in a haystack.
 

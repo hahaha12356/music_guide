@@ -4,10 +4,12 @@ date: 2025-12-18
 draft: false
 categories: ["FNF"]
 tags: ["Gaming", "Music", "FNF Mods", "Chromebook", "Unblocked"]
+description: "Learn How to Play FNF Mods on School Chromebook with this unblocked 2025 guide. Discover the best sites and methods to play Friday Night Funkin at school."
 ---
 
 ![Student playing FNF mods on a school Chromebook laptop](/images/fnf-school.jpg)
-**Introduction**
+
+## Introduction
 
 We have all been there. The teacher is droning on about algebra, you have finished your assignment early, and you have exactly 15 minutes to kill before the bell rings. You open your laptop, ready to drop some bars, only to be greeted by the dreaded "Site Blocked" screen from your school's IT administrator. It is the absolute worst.
 

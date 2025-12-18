@@ -4,10 +4,12 @@ date: 2025-12-18
 draft: false
 categories: ["FNF"]
 tags: ["Gaming", "Music", "FNF Mods", "Pibby Corrupted"]
+description: "The ultimate FNF Pibby Corrupted Mod guide for 2025. Get download links, song lists, and tips for beating the hardest Pibby Apocalypse mods."
 ---
 
 ![FNF Pibby corrupted mod character in glitch style](/images/fnf-pibby.jpg)
-**Introduction**
+
+## Introduction
 
 The glitch is spreading, and nobody is safe. If you have been anywhere near the *Friday Night Funkin'* community lately, you have definitely seen the chaos of the "Pibby" timeline. Based on the viral Adult Swim concept *Come and Learn with Pibby*, these mods take our beloved childhood cartoon characters—from Finn and Jake to SpongeBob—and twist them into glitchy, horrifying zombies.
 

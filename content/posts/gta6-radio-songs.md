@@ -4,10 +4,12 @@ date: 2025-12-18
 draft: false
 categories: ["Soundtracks"]
 tags: ["Gaming", "Music", "Soundtracks", "GTA 6"]
+description: "Explore the rumored GTA 6 Radio Stations and confirmed songs list for 2025. Discover the soundtrack vibe of Vice City and our ultimate wishlist."
 ---
 
 ![GTA 6 Vice City vibe car driving with radio station overlay](/images/gta6-radio.jpg)
-**Introduction**
+
+## Introduction
 
 We have been waiting for this moment for over a decade. The return to Vice City—or rather, the state of Leonida—is finally upon us. If there is one thing Rockstar Games never misses on, it is the soundtrack. From the neon-soaked 80s hits of *Grand Theft Auto: Vice City* to the West Coast classics of *San Andreas*, the radio stations define the atmosphere of the game.
 

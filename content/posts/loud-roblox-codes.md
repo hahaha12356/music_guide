@@ -4,10 +4,12 @@ date: 2025-12-18
 draft: false
 categories: ["Roblox"]
 tags: ["Gaming", "Music", "Roblox", "Loud Audio Codes"]
+description: "Troll your friends with these Extremely Loud Roblox Audio Codes. Updated 2025 list of working earrape and distorted IDs for pranking players."
 ---
 
 ![Funny Roblox character playing extremely loud audio to prank players](/images/loud-roblox.jpg)
-**Introduction**
+
+## Introduction
 
 Let’s keep it 100—sometimes, you just wake up and choose violence. We have all been there: you are chilling in *Da Hood* or *Natural Disaster Survival*, and the server is just a little *too* quiet, or worse, someone else is trying to act like the DJ with some terrible tunes. In those moments, you don't need a melody; you need pure, unadulterated volume.
 
