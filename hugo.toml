@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'MusicGuide.life'
 theme = 'PaperMod'
 
+canonifyURLs = true
 enableRobotsTXT = true
 
 # 启用 JSON 输出以支持搜索功能
