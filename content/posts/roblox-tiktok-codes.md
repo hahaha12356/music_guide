@@ -6,6 +6,7 @@ tags: ["Roblox", "Music Codes", "TikTok"]
 categories: ["Roblox"]
 ---
 
+![Roblox character dancing to TikTok songs](/images/roblox-tiktok-songs.jpg)
 Yo, Robloxians! What's good?
 
 Let’s be real for a second—grinding in *Brookhaven*, hanging out in *Da Hood*, or just flexing your fit in *Catalog Avatar Creator* is absolutely dead without the right soundtrack. Silence is the enemy of the vibe.
@@ -18,18 +19,21 @@ I’ve done the heavy lifting for you. I’ve scoured the library to find the fr
 
 Here is the curated list of the absolute best tracks to blast right now.
 
-| Song Name | Artist | Roblox ID |
+| Song Name (TikTok Hit) | Artist | Roblox ID Code |
 | :--- | :--- | :--- |
-| Cupid (Twin Ver.) | Fifty Fifty | 8329104421 |
-| Paint The Town Red | Doja Cat | 9021456789 |
-| Just Wanna Rock | Lil Uzi Vert | 7744102938 |
-| Strangers | Kenya Grace | 6655201947 |
-| Greedy | Tate McRae | 5510293847 |
-| Water | Tyla | 9928374651 |
-| Daylight | David Kushner | 4433221109 |
-| Barbie World | Nicki Minaj & Ice Spice | 8877665544 |
-| What Was I Made For? | Billie Eilish | 3322115566 |
-| Seven (Clean) | Jung Kook ft. Latto | 1234987654 |
+| **Pink Soldiers (Squid Game)** | Boris Way | 7943962035 |
+| **Material Girl** | Madonna | 6473620984 |
+| **Say So** | Doja Cat | 5211168716 |
+| **Industry Baby** | Lil Nas X | 7253841629 |
+| **ABCDEFU** | GAYLE | 8272930211 |
+| **Heat Waves** | Glass Animals | 6432181830 |
+| **Stay** | Justin Bieber | 6983052670 |
+| **Good 4 U** | Olivia Rodrigo | 6844912719 |
+| **Dance Monkey** | Tones and I | 4256226685 |
+| **Astronaut In The Ocean** | Masked Wolf | 6463339088 |
+| **Levitating** | Dua Lipa | 6516666870 |
+
+Note: Roblox codes can expire or be removed due to copyright issues. If a code doesn't work, please try the next one on the list! We update this table monthly.
 
 > **Note:** Roblox copyright bots are aggressive. If a code stops working, drop a comment below and I'll update it ASAP.
 
