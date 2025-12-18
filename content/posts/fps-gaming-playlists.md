@@ -1,6 +1,6 @@
 ---
 title: "10 Best Spotify Playlists for FPS Gaming (Valorant, CS:GO) in 2025"
-date: 2025-12-19
+date: 2025-12-18
 draft: false
 categories: ["Soundtracks"]
 tags: ["Gaming", "Music", "Soundtracks", "Spotify Playlists", "Valorant", "CS:GO"]

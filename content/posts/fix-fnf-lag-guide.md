@@ -1,8 +1,8 @@
 ---
 title: "How to Fix FNF Lag on Low-End PC: The Ultimate 2025 Optimization Guide"
-date: 2025-12-19
+date: 2025-12-18
 draft: false
-categories: ["FNF Mods"]
+categories: ["FNF"]
 tags: ["Gaming", "Music", "FNF Mods", "FNF Lag Fix"]
 ---
 

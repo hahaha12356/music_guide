@@ -1,8 +1,8 @@
 ---
 title: "How to Play FNF Mods on School Chromebook (Unblocked 2025 Guide)"
-date: 2025-12-19
+date: 2025-12-18
 draft: false
-categories: ["FNF Mods"]
+categories: ["FNF"]
 tags: ["Gaming", "Music", "FNF Mods", "Chromebook", "Unblocked"]
 ---
 

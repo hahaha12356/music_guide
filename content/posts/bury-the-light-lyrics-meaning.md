@@ -1,6 +1,6 @@
 ---
 title: "Vergil's Anthem Explained: The Meaning Behind 'Bury the Light' Lyrics"
-date: 2025-12-19
+date: 2025-12-18
 draft: false
 categories: ["Soundtracks"]
 tags: ["Gaming", "Music", "Soundtracks", "Devil May Cry 5", "Vergil"]

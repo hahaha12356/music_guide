@@ -1,6 +1,6 @@
 ---
 title: "15+ Extremely Loud Roblox Audio Codes to Prank Players (Working 2025)"
-date: 2025-12-19
+date: 2025-12-18
 draft: false
 categories: ["Roblox"]
 tags: ["Gaming", "Music", "Roblox", "Loud Audio Codes"]

@@ -1,8 +1,8 @@
 ---
 title: "FNF Pibby Corrupted Mod: Download & Song List Guide (2025 Update)"
-date: 2025-12-19
+date: 2025-12-18
 draft: false
-categories: ["FNF Mods"]
+categories: ["FNF"]
 tags: ["Gaming", "Music", "FNF Mods", "Pibby Corrupted"]
 ---
 
