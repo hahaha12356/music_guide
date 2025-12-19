@@ -23,6 +23,18 @@ home = ["HTML", "RSS", "JSON"]
     ShowCodeCopyButtons = true
     ShowWordCount = true
 
+    # 背景设置（可随时替换为你自己的 /images/bg-*.jpg）
+    [params.backgroundLight]
+        image = "/images/fps-playlist.jpg"
+        size = "cover"
+        position = "center top"
+        repeat = "no-repeat"
+        attachment = "fixed"
+
+    [params.backgroundDark]
+        color = "#1d1e20"
+        repeat = "no-repeat"
+
     # 首页配置 (Profile Mode) - 如果想要列表模式，可删除 profileMode 块
     [params.profileMode]
         enabled = false

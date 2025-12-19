@@ -1,0 +1,51 @@
+{{- with site.Params.background }}
+<style>
+  body {
+    {{- with .color }}background-color: {{ . }};{{ end }}
+    {{- with .image }}background-image: url('{{ . | absURL }}');{{ end }}
+    {{- with .position }}background-position: {{ . }};{{ end }}
+    {{- with .size }}background-size: {{ . }};{{ end }}
+    {{- with .repeat }}background-repeat: {{ . }};{{ end }}
+    {{- with .attachment }}background-attachment: {{ . }};{{ end }}
+  }
+  .main { background: transparent; }
+  .list { background: transparent; }
+  /* subtle texture overlay for readability */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(0,0,0,.04) 0, rgba(0,0,0,.04) 1px, transparent 1px, transparent 4px),
+      repeating-linear-gradient(90deg, rgba(0,0,0,.02) 0, rgba(0,0,0,.02) 1px, transparent 1px, transparent 6px);
+  }
+</style>
+{{- end }}
+
+{{- with site.Params.backgroundLight }}
+<style>
+  [data-theme="light"] body {
+    {{- with .color }}background-color: {{ . }};{{ end }}
+    {{- with .image }}background-image: url('{{ . | absURL }}');{{ end }}
+    {{- with .position }}background-position: {{ . }};{{ end }}
+    {{- with .size }}background-size: {{ . }};{{ end }}
+    {{- with .repeat }}background-repeat: {{ . }};{{ end }}
+    {{- with .attachment }}background-attachment: {{ . }};{{ end }}
+  }
+</style>
+{{- end }}
+
+{{- with site.Params.backgroundDark }}
+<style>
+  [data-theme="dark"] body {
+    {{- with .color }}background-color: {{ . }};{{ end }}
+    {{- with .image }}background-image: url('{{ . | absURL }}');{{ end }}
+    {{- with .position }}background-position: {{ . }};{{ end }}
+    {{- with .size }}background-size: {{ . }};{{ end }}
+    {{- with .repeat }}background-repeat: {{ . }};{{ end }}
+    {{- with .attachment }}background-attachment: {{ . }};{{ end }}
+  }
+</style>
+{{- end }}
