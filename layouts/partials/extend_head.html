@@ -7,7 +7,7 @@
 <style>
   html[data-theme="light"] body {
     {{- with .color }}background-color: {{ . }} !important;{{ end }}
-    {{- with .image }}background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('{{ . | absURL }}') !important;{{ end }}
+    {{- with .image }}background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('{{ . | absURL }}') !important;{{ end }}
     {{- with .position }}background-position: {{ . }} !important;{{ end }}
     {{- with .size }}background-size: {{ . }} !important;{{ end }}
     {{- with .repeat }}background-repeat: {{ . }} !important;{{ end }}
@@ -20,7 +20,7 @@
 <style>
   html[data-theme="dark"] body {
     {{- with .color }}background-color: {{ . }} !important;{{ end }}
-    {{- with .image }}background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ . | absURL }}') !important;{{ end }}
+    {{- with .image }}background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('{{ . | absURL }}') !important;{{ end }}
     {{- with .position }}background-position: {{ . }} !important;{{ end }}
     {{- with .size }}background-size: {{ . }} !important;{{ end }}
     {{- with .repeat }}background-repeat: {{ . }} !important;{{ end }}
