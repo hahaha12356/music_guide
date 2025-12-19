@@ -2,7 +2,7 @@
 <style>
   body {
     {{- with .color }}background-color: {{ . }};{{ end }}
-    {{- with .image }}background-image: url('{{ . | absURL }}');{{ end }}
+    {{- with .image }}background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('{{ . | absURL }}');{{ end }}
     {{- with .position }}background-position: {{ . }};{{ end }}
     {{- with .size }}background-size: {{ . }};{{ end }}
     {{- with .repeat }}background-repeat: {{ . }};{{ end }}
@@ -28,7 +28,7 @@
 <style>
   [data-theme="light"] body {
     {{- with .color }}background-color: {{ . }};{{ end }}
-    {{- with .image }}background-image: url('{{ . | absURL }}');{{ end }}
+    {{- with .image }}background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('{{ . | absURL }}');{{ end }}
     {{- with .position }}background-position: {{ . }};{{ end }}
     {{- with .size }}background-size: {{ . }};{{ end }}
     {{- with .repeat }}background-repeat: {{ . }};{{ end }}
@@ -41,7 +41,7 @@
 <style>
   [data-theme="dark"] body {
     {{- with .color }}background-color: {{ . }};{{ end }}
-    {{- with .image }}background-image: url('{{ . | absURL }}');{{ end }}
+    {{- with .image }}background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ . | absURL }}');{{ end }}
     {{- with .position }}background-position: {{ . }};{{ end }}
     {{- with .size }}background-size: {{ . }};{{ end }}
     {{- with .repeat }}background-repeat: {{ . }};{{ end }}
