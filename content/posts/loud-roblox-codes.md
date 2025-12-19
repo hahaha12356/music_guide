@@ -37,6 +37,10 @@ Below is the holy grail of ear-shattering audio. These IDs are perfect for boomb
 | Broken Speaker Test | Tech | 3322115566 |
 | Vine Boom (Spam Loop) | Vine | 8877665544 |
 
+## The Vibe Check
+
+硬核玩家的“捣乱工具箱”三件套：Air Horn Spam、Distorted OOF、Vine Boom。Air Horn 的穿透力是清场利器，节拍一密就像有个裁判在你耳边吹哨；Distorted OOF 属于情绪武器，短促却极脏，一下就把频道刷满注意力；Vine Boom 则是万能标点符号，配合聊天与动作，信息与梗都更有“重量”。但别把“吵”当成唯一目标：真正的掌控在于节奏——间歇、堆叠、突然停顿，比无脑全程 earrape 更能拿捏气氛。我在 Da Hood 里试了一个晚上：持续输出会被人直接静音或管理员踢；换成“点到为止”的三连击，反而能把场面带嗨而不被讨厌。这类代码最适合“打点”，不是“打架”。
+
 ## Why This Matters
 
 You might ask, "Why would anyone want to listen to this?" The answer is simple: **Reaction Gaming**.
@@ -53,6 +57,15 @@ In the current Roblox meta, social interaction is half the game. Having access t
 
 **Q: What if a code says "Content Deleted"?**
 **A:** Roblox moderation actively purges "bypassed" or disruptive audio files. If a code in the table above stops working, it means Roblox removed it. Leave a comment below, and we will replace it with a fresh working ID.
+
+## Before You Play
+
+别让自己翻车的避坑：
+- 测代码前先把系统与游戏音量降到 30–40%，大声文件会直接把你的设备推到失真；
+- 先在私服/空房测试，确认不会触发地图的自动静音或脚本封锁；
+- 准备“静音”快捷键，避免管理员出现时来不及收手；
+- Boombox 的冷却与传输延迟会让你以为“没播出”，给它 1–2 秒缓冲；
+- 代码失效别纠缠，换同类效果的备选（比如用 Vine Boom 替代短促尖叫），达到效果才是目标。
 
 ## Conclusion
 

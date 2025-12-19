@@ -41,6 +41,15 @@ Note: Roblox codes can expire or be removed due to copyright issues. If a code d
 
 > **Note:** Roblox copyright bots are aggressive. If a code stops working, drop a comment below and I'll update it ASAP.
 
+## Editor's Top Picks
+
+毒舌乐评人给三首“社交必备”打分：
+- Material Girl：这就是换装/走秀场景的绝配，低频不重、律动清晰，既能让角色动作显得更“亮”，又不会把聊天声压没。
+- Industry Baby：适合“进场宣言”，铜管主题就是气势本身；在广场开播两段，你的造型与存在感会一起被抬高。
+- Levitating：作为混合曲库里的黏合剂，它不抢戏，但能把所有人的脚步与心跳拉到同一拍子上，聊天更顺、合照更好看。
+放什么，不在热度，在“场合”。TikTok 热门的好处是识别度高，但别全放加速版——服务器里不需要一股脑的尖锐高频，需要的是“让大家动起来”的节奏光泽。
+
+
 ## 🎧 How to Use These Roblox Music IDs
 
 If you're new to the Boombox game or just need a refresher, here is how you get the music playing:
@@ -50,6 +59,13 @@ If you're new to the Boombox game or just need a refresher, here is how you get 
 3.  **Enter the Code:** Copy one of the IDs from the table above (Ctrl+C) and paste it into the box (Ctrl+V).
 4.  **Hit Play:** Smash that enter/play button and let the server hear what real taste sounds like.
 
+## Troubleshooting Tips
+
+遇到“Invalid”或播不出来：
+- 粘贴时多了空格或不可见字符，移动端最常见；只保留数字。
+- 地图禁用了版权音频，试试其他支持 Boombox 的游戏；
+- 你的音量太大导致设备限幅，听起来像坏码；把系统与游戏音量降到 60–80% 再测；
+- 别同场景全部放加速版，久了容易疲劳与被管理员盯；准备一套“正常版 + 轻 Remix”的备选，社交体验会更好。
 ## Conclusion
 
 Stay tuned to **MusicGuide.life**—I’ll be dropping more FNF mods and soundtrack deep dives later this week. GG!

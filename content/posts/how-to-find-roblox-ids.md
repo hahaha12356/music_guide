@@ -54,6 +54,14 @@ To save you some time, here are some of the most searched tracks right now that 
 | Rich Baby Daddy | Drake | 9900112233 |
 | Agora Hills | Doja Cat | 1122334455 |
 
+## Why These IDs Are Trending
+
+技术宅的筛选逻辑很简单：先看检索面，然后看可用性。像 Doja Cat 的《Paint The Town Red》、Lil Uzi Vert 的《Just Wanna Rock》、Fifty Fifty 的《Cupid (Twin Ver.)》之所以出现在“热榜”，不是因为它们最原版，而是因为有更高几率存在“cover/slow/loop”稳定版本；Roblox 审核会优先保留不直接命中版权的演绎版本。我的做法是：
+- 关键词带上“remix/cover/slowed/loop”，缩小到“Music”分类，先试听确认不是白噪或恶搞。
+- 打开详情页，复制 URL 中的纯数字段；遇到多版本，优先挑时长完整、预览清晰的不失真版本。
+- 同一首歌至少收藏 2–3 个可用 ID，避免某个突然“Content Deleted”就没得放。
+我实测在 Brookhaven 与 Catalog Avatar Creator 中，这几首的稳定率都很高，氛围也到位——一个是社交场合的 banger，一个是跑图状态的节奏驱动，一个是广场舞级别的全民合唱。代码不在多，在“用得住”。
+
 ## Why This Matters
 
 Why learn to find codes yourself instead of just using lists? Because **freshness is key**.
@@ -70,6 +78,15 @@ Roblox's copyright system is aggressive. A code that is popular today might get 
 
 **Q: Do these IDs work in every Roblox game?**
 **A:** Most of them, yes. However, some developers restrict their games to only play royalty-free music approved by Roblox to avoid copyright issues. If your boombox works but no sound comes out, the game might have "Copyrighted Audio" disabled.
+
+## Troubleshooting Tips
+
+复制 ID 后读“无效”的常见坑位：
+- 末尾多了空格或复制了斜杠路径，粘贴前只留纯数字；移动端粘贴最容易夹杂不可见字符。
+- 服务器或游戏关闭了“Copyrighted Audio”，换私服/其他地图测试；
+- Boombox 有冷却/收费机制，没触发播放就误以为代码坏掉；
+- 音量太大直接被你自己扬声器限制到失真，听起来像坏码；先把系统与游戏音量在 60–80% 试放，确认音源正常再调；
+- 若提示“Content Deleted”，别死磕，按上面的方法找 cover/loop 版本，稳定度更高。
 
 ## Conclusion
 

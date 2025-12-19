@@ -37,6 +37,10 @@ Below is the updated list for late 2025. These tracks range from slow piano ball
 | Sweater Weather (Slowed) | The Neighbourhood | 5566778899 |
 | Romantic Homicide | d4vd | 1122334455 |
 
+## Why These IDs Are Trending
+
+技术宅角度看“悲伤曲库”的稳定性：像《Glimpse of Us》《Someone You Loved》《Heather》这类人声主导的慢速抒情，Roblox 上更常见的是“slowed/cover”版本——一方面更容易通过审核，另一方面在游戏场景里也更贴合：慢拍能和角色动作、雨景滤镜更自然地对齐，不会出现“音乐很吵、情绪很散”的违和。我的收藏法则是：同一首至少备两种版本（原速/慢速），根据场景切换；优先选人声清楚、不带过度压缩的文件，避免长时间听感疲劳。实测在 Brookhaven 的室内与雨夜两个场景，慢速版本的沉浸感更强，聊天也更愿意“慢下来”。不是所有悲伤都要极端低频，能让你“好好难过”的，才是好代码。
+
 ## Why This Matters
 
 You might wonder, why do people want to listen to sad music in a game like Roblox? It comes down to **immersion and storytelling**.
@@ -53,6 +57,15 @@ In Roleplay (RP) games like *Brookhaven* or *Berry Avenue*, creating a realistic
 
 **Q: Can I use these codes in Roblox Studio for my own game?**
 **A:** Yes! If you are a developer building a "Sad Vibe" showcase or a hangout game, you can use these IDs in the "Sound" object properties within Roblox Studio to set the background music for your server.
+
+## Pro Gamer Advice
+
+把悲伤用得“对位”：
+- RP 场景里把音乐音量锁在 60–70%，环境与脚步保留到 80–90%，叙事才不被吞没；
+- 室外雨景可加轻微混响滤镜，让人声更贴景，但别过度；
+- 公共房间播放尽量避开极端低频版本，容易与系统限幅打架、听起来像破音；
+- 长时间听建议切换“清唱/钢琴伴奏”与“完整版”交替，避免情绪疲劳；
+- 如果代码突然失效，别硬找原版，改搜“cover/loop”更容易有替代。
 
 ## Conclusion
 

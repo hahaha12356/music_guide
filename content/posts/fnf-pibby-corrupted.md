@@ -40,6 +40,10 @@ If you want to experience the full story of the corruption, these are the tracks
 *   **"Glitched Gem" (vs. Steven Universe):** Features intense visual shaders that mimic the show's art style breaking down.
 *   **"Child's Play" (vs. Chucky):** A darker, faster track that leans heavily into the horror aspect.
 
+## Is It Too Hard?
+
+Pibby 系列的难度不是“快”那么简单，它是把你丢进一个不断破碎的UI与谱面里考反应。作为硬核玩家，我最怕的不是 BPM，而是“黑噪点”与 UI 抖动：你的大脑会在微秒级做两件事——识别避让的 glitch note，同时坚持节拍。像 vs. Finn 的《No Hero》，视觉干扰与判定窗叠加，第一次上手几乎必崩；但一旦你把“不要碰黑噪点”的肌肉记忆练出来，剩下的就是节奏控制。推荐训练法：先在低速练谱，关闭 Shaders 与 Distractions，习惯界面元素的“假动作”，再开回全特效；另外把输入延迟压到最低（禁 V-Sync、高性能模式），会让你在密集段落不再被 UI“骗手”。这类模组的魅力就在此——它不只是打歌，更是与系统对抗的心流挑战。
+
 ## Why This Matters
 
 Why has the **FNF Pibby Corrupted Mod** taken over the meta? It hits a specific sweet spot for gamers: **Corrupted Nostalgia**.
@@ -56,6 +60,13 @@ The original *Pibby* concept trailer went viral because it took safe, comforting
 
 **Q: Can I play Pibby mods on mobile?**
 **A:** Officially, no. However, there are unofficial ports on YouTube and shady APK sites. Be very careful downloading these, as they often contain malware. We recommend playing on PC for the safest experience.
+
+## Pro Gamer Advice
+
+开打前先做三件事：
+- 引擎设置里关掉 Shaders 与 Camera Zoom，熟悉谱面结构后再逐步开启，不要一口吃全特效。
+- 键位用你熟悉的四键（DFJK 或 ASKL），避免混用手柄与键盘导致判定波动；把按键重复率关掉，防止系统误触发。
+- 练习避让 glitch note 的节奏：把节拍器开到 1.0x 与 0.9x 两档来回切换，训练“看见黑噪点不动手”的延迟控制。遇到突发花屏，别硬打，直接重启歌曲，避免无效挫败感。
 
 ## Conclusion
 

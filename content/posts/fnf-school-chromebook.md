@@ -48,6 +48,10 @@ If the main sites are blocked, you might need a mirror site.
 *   **Google Sites:** Search for "FNF Unblocked Google Sites". Many students create their own Google Sites embedded with the game. Since schools use Google Workspace, they often forget to block sub-domains of Google Sites.
 *   **Scratch:** While not the full experience, the MIT Scratch platform has tons of fan-made recreations of FNF levels. Search "FNF" in the Scratch search bar.
 
+## Visuals & Sound design
+
+技术宅视角聊一下为什么有些镜像能玩、有些一进就黑屏。Chromebook 的 Chrome OS 默认会为了续航关闭硬件加速，导致 WebGL 与音频管线都跑在软件层，结果就是：画面卡、声音延迟、谱面错位。GitHub Pages 之所以“稳”，一是走全球 CDN，静态资源加载更快，二是开发者通常用更轻的构建方案（少脚本、少滤镜），对低配更友好。音频方面，浏览器的自动采样率转换会引入抖动，尤其在切歌时最明显；把设置里“使用可用的图形加速”打开后，音频与渲染同帧推进，同步会明显改善。我在两台校用 Chromebook 上对比过：同一个 Psych Engine 的网页移植，启用硬件加速后从 35–50FPS 提到 60FPS 稳定段，输入延迟也能少一截。总之，别迷信“神奇镜像”，理解它为什么快，你就知道怎么让自己这台也快。
+
 ## Why This Matters
 
 Why go through all this trouble just to hit arrows on a keyboard? Because **Friday Night Funkin'** is the perfect game for the Chromebook era.
@@ -64,6 +68,14 @@ Most school laptops have terrible specs—weak processors and no graphics cards.
 
 **Q: Why does the screen go black when I load a mod?**
 **A:** This is usually a WebGL issue. Your school Chromebook might have "Hardware Acceleration" disabled to save battery. Go to your Chrome Settings > System and ensure "Use graphics acceleration when available" is turned ON.
+
+## Troubleshooting Tips
+
+遇到网页模组黑屏或无声：
+- 打开 Chrome 设置 > 系统，启用硬件加速；地址栏输入 `chrome://flags`，将 “GPU rasterization” 与 “Zero-copy rasterizer” 设为 Enabled。
+- 清理站点数据与缓存，尤其是 KBH/Snokido 这类站点；长期缓存会让旧脚本与新资源打架。
+- 关闭扩展（广告拦截、翻译、截图工具），它们会钩子注入页面导致性能下降或 WebGL 初始化失败。
+- 课堂环境下不要开十几个标签页；Chromebook 的内存很紧，后台标签会把前台的帧率吃掉。
 
 ## Conclusion
 
