@@ -39,7 +39,7 @@ Below is the holy grail of ear-shattering audio. These IDs are perfect for boomb
 
 ## The Vibe Check
 
-硬核玩家的“捣乱工具箱”三件套：Air Horn Spam、Distorted OOF、Vine Boom。Air Horn 的穿透力是清场利器，节拍一密就像有个裁判在你耳边吹哨；Distorted OOF 属于情绪武器，短促却极脏，一下就把频道刷满注意力；Vine Boom 则是万能标点符号，配合聊天与动作，信息与梗都更有“重量”。但别把“吵”当成唯一目标：真正的掌控在于节奏——间歇、堆叠、突然停顿，比无脑全程 earrape 更能拿捏气氛。我在 Da Hood 里试了一个晚上：持续输出会被人直接静音或管理员踢；换成“点到为止”的三连击，反而能把场面带嗨而不被讨厌。这类代码最适合“打点”，不是“打架”。
+Sweaty troll toolkit: Air Horn Spam, Distorted OOF, and Vine Boom. Air Horn has surgical penetration—when the beat gets crowded, it’s a ref whistle in your ear. Distorted OOF is a mood weapon: short, filthy, instantly hijacks attention. Vine Boom is universal punctuation—pair it with emotes or chat and jokes land heavier. But don’t chase “loud” as the only win condition. Real control is pacing—bursts, stacks, sudden silence—way better than full-time earrape. I ran a night in Da Hood: constant spam got insta-muted or admin-kicked; three-hit “tap in, tap out” hyped the lobby without being hated. These codes are for accent, not war.
 
 ## Why This Matters
 
@@ -60,12 +60,12 @@ In the current Roblox meta, social interaction is half the game. Having access t
 
 ## Before You Play
 
-别让自己翻车的避坑：
-- 测代码前先把系统与游戏音量降到 30–40%，大声文件会直接把你的设备推到失真；
-- 先在私服/空房测试，确认不会触发地图的自动静音或脚本封锁；
-- 准备“静音”快捷键，避免管理员出现时来不及收手；
-- Boombox 的冷却与传输延迟会让你以为“没播出”，给它 1–2 秒缓冲；
-- 代码失效别纠缠，换同类效果的备选（比如用 Vine Boom 替代短促尖叫），达到效果才是目标。
+Avoid self-wipeouts:
+- Drop system/game volume to ~30–40% before testing; loud files will hard-clip weak speakers.
+- Test in private/empty servers first to avoid auto-mute scripts.
+- Bind a panic mute key so you can chill when an admin appears.
+- Boombox cooldown/transmission delay can fake “no play”—give it 1–2 seconds.
+- If a code dies, swap to a similar effect (e.g., Vine Boom instead of a shrill squeal). The goal is the reaction, not that exact file.
 
 ## Conclusion
 

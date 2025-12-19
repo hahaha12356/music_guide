@@ -39,7 +39,7 @@ Below is the updated list for late 2025. These tracks range from slow piano ball
 
 ## Why These IDs Are Trending
 
-技术宅角度看“悲伤曲库”的稳定性：像《Glimpse of Us》《Someone You Loved》《Heather》这类人声主导的慢速抒情，Roblox 上更常见的是“slowed/cover”版本——一方面更容易通过审核，另一方面在游戏场景里也更贴合：慢拍能和角色动作、雨景滤镜更自然地对齐，不会出现“音乐很吵、情绪很散”的违和。我的收藏法则是：同一首至少备两种版本（原速/慢速），根据场景切换；优先选人声清楚、不带过度压缩的文件，避免长时间听感疲劳。实测在 Brookhaven 的室内与雨夜两个场景，慢速版本的沉浸感更强，聊天也更愿意“慢下来”。不是所有悲伤都要极端低频，能让你“好好难过”的，才是好代码。
+Tech perspective on “sad set” stability: vocal-led ballads like “Glimpse of Us,” “Someone You Loved,” and “Heather” often survive as slowed/cover variants on Roblox. They pass moderation more easily and fit the in-game vibe better—slow tempo lines up with avatar motion and rain filters so you don’t get “loud music, scattered mood.” Collection rules: keep two versions per song (original/slow) and swap per scene; favor clean vocals with minimal over-compression to avoid fatigue in long sessions. Tested in Brookhaven indoors and rainy nights, slow cuts are more immersive and make chat naturally slow down. Not all sadness needs subwoofer sludge—the best codes let you actually feel it.
 
 ## Why This Matters
 
@@ -60,12 +60,12 @@ In Roleplay (RP) games like *Brookhaven* or *Berry Avenue*, creating a realistic
 
 ## Pro Gamer Advice
 
-把悲伤用得“对位”：
-- RP 场景里把音乐音量锁在 60–70%，环境与脚步保留到 80–90%，叙事才不被吞没；
-- 室外雨景可加轻微混响滤镜，让人声更贴景，但别过度；
-- 公共房间播放尽量避开极端低频版本，容易与系统限幅打架、听起来像破音；
-- 长时间听建议切换“清唱/钢琴伴奏”与“完整版”交替，避免情绪疲劳；
-- 如果代码突然失效，别硬找原版，改搜“cover/loop”更容易有替代。
+Make sadness land in the right place:
+- In RP scenes, let music sit at 60–70% and environment/footsteps at 80–90% so the story stays audible.
+- Outdoors with rain, add light reverb to voices, but don’t overdo it.
+- In public rooms, avoid ultra–low-end versions—they fight device limiters and sound like broken speakers.
+- For long sessions, alternate “a cappella/piano” with full mixes to prevent emotional fatigue.
+- If a code dies unexpectedly, don’t chase the original—search for cover/loop replacements.
 
 ## Conclusion
 

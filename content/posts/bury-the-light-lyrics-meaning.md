@@ -46,7 +46,7 @@ It represents the struggle of self-definition. The composition by Casey Edwards 
 
 ## The Vibe Check
 
-作为一个毒舌乐评人，我得说《Bury the Light》的“爽点”来得非常精准：开场的合成器与吉他勾勒出冷峻的孤独，随后鼓点一层层压上，像风暴前的气压把你按在椅子里。我第一次循环这首歌是在通关 Bloody Palace 之后，整段桥段像是把“人性”打包压缩塞进刀鞘，等合唱炸开再把黑暗一股脑倾倒出来——就是那种从 chill 到 banger 的瞬间切换，毫不客气。副歌的旋律线很好记，却不油腻；吉他失真控制得克制，不靠堆砌噪点取胜；编曲上电子与管弦的混搭不为炫技，而是服务角色叙事：Vergil 的优雅与残酷并置。更狠的是节奏的牵引力——中段不断“蓄力”，让你下意识跟着呼吸变快，等到“I am the storm…”落下，整首歌把你从旁观者拖进风暴眼。它不是那种只适合健身的硬核曲，更像打一场需要心流的 boss 战：既要冷静，又要狠。
+Speaking as a mildly ruthless music critic, this track hits the “switch” perfectly. The synth and guitar sketch that cold isolation first, then the drums stack pressure like barometric air before a storm. I looped it after clearing Bloody Palace—when the bridge tucks the “human side” back into the scabbard and the chorus detonates, it flips from chill to full-on banger without mercy. The hook is stupidly memorable without getting cheesy; the guitar distortion stays disciplined instead of spraying noise; the electronic–orchestral blend isn’t flexing, it’s character-writing—Vergil’s elegance and brutality side by side. The real sauce is momentum: that midsection keeps charging until “I am the storm…” lands, dragging you from observer into the eye. It’s not just gym metal; it’s boss-fight flow-state music—you have to stay calm and go for the kill.
 
 ## FAQ Section
 
@@ -61,7 +61,7 @@ It represents the struggle of self-definition. The composition by Casey Edwards 
 
 ## Before You Play
 
-想在游戏里把这首歌听得更带感，我的私藏设置是：把音乐音量锁在 80%，音效维持 100%，语音与环境声降到 60% 左右，避免脚步与打击细节被掩盖；耳机用封闭式能拿到更饱满的低频，开背式则更通透，适合长时间刷关卡；EQ 方面轻微提升 60–120Hz，收一点 3–5kHz 的刺感，留出 8–10kHz 的空气感让合唱更“发光”。如果你用主机或电视播放，记得关闭“自动音量均衡”，它会把动态压平，副歌就不够炸。还有个小坑：在 PC 上同时开浏览器与串流软件时，系统会改写默认采样率，出现毛刺或延迟——把播放设备固定为 48kHz/24bit，就稳了。
+To make this song punch in-game, I keep music at ~80%, SFX at 100%, and voice/ambient around 60% so footsteps and hit sparks don’t get buried. Closed-back headphones give the low-end some weight; open-back feels airier for long sessions. EQ: a tiny lift at 60–120 Hz, tame a bit around 3–5 kHz if it’s pokey, and let 8–10 kHz breathe so the chorus “glows.” On consoles/TVs, disable any “auto volume leveling”—it flattens dynamics and kills the drop. On PC, if you’re streaming while playing, lock your output device to 48 kHz / 24-bit to avoid random resampling glitches and weird latency.
 
 ## Conclusion
 

@@ -62,7 +62,7 @@ In *Friday Night Funkin'*, the game logic is tied to the frame rate. If your gam
 
 ## Gameplay Experience
 
-作为硬核玩家，我把这套优化跑在一台老笔记本上做了压力测试：Psych Engine 开低质 + 关闭抗锯齿 + 任务管理器高优先级，原本 45–60FPS 的波动能稳定到 90FPS 左右，最直观的变化是极密集段落不再“吞键”。尤其是 Camellia 那类高 BPM 曲，旧配置最容易在连打时出现音画不同步——帧率上来后，判定窗更稳定，你会明显感觉“GOOD”提升、“MISS”减少。还有个体感细节：把 V-Sync 关掉，输入延迟比锁 60FPS更小，长连段不再像踩棉花。显卡控制面板把功耗模式调到“优先性能”，风扇会更吵，但节奏不掉链子时，手感提升远大于噪音烦恼。总之，这不是玄学，是可复现实验：把系统和引擎的浪费都关掉，你的硬件哪怕“土豆”，也能玩到“硬核”。
+I stress-tested these tweaks on a relic of a laptop: Psych Engine set to Low Quality + AA off + High Priority in Task Manager. A fluctuating 45–60 FPS jumped to a steady ~90 FPS. The biggest win is no more “key eats” in dense sections. On high-BPM charts like Camellia, old hardware desyncs audio/visual during jacks; once FPS stabilizes, the judgment window feels consistent—more “GOODs,” fewer “MISSes.” Turning off V-Sync shaved input latency compared to a hard 60 cap; long streams stop feeling like typing on a pillow. Cranking the GPU to “Prefer Maximum Performance” does make fans loud, but smoother rhythm > extra noise. This isn’t placebo; it’s reproducible: cut engine and OS waste, and even a potato PC plays like it wants to win.
 
 ## FAQ Section
 
@@ -77,12 +77,12 @@ In *Friday Night Funkin'*, the game logic is tied to the frame rate. If your gam
 
 ## Troubleshooting Tips
 
-遇到“突然一卡然后黑屏”的老问题，先排查这些坑：
-- 关闭浏览器、Discord overlay、GeForce Experience 等后台；它们会抢显存与前台优先级。
-- Windows 电源计划设为“高性能”，并在显卡面板禁用 V-Sync；若帧率跳动太大，可临时锁 60FPS 稳定判定。
-- Psych Engine 里把 Shaders、Distractions 关掉；资源切歌卡顿则打开 Persistent Cached Data。
-- 若音画错位，检查系统音频设备采样率是否被软件改写，统一到 48kHz 可减少突发延迟。
-- Alt+Tab 频繁切出切入会打断渲染队列，打歌前把窗口固定在前台；串流录制请改用 NVENC 并降低码率。
+If you get random stutters or black screens, check these first:
+- Kill background hogs: browsers, Discord overlay, GeForce Experience.
+- Set Windows power plan to High Performance; disable V-Sync in GPU panel. If FPS swings too hard, cap at 60 temporarily for stable judgments.
+- In Psych Engine, turn off Shaders/Distractions; if songs hitch on load, enable Persistent Cached Data.
+- If audio desyncs, lock your output device to 48 kHz to reduce surprise resampling latency.
+- Avoid rapid Alt+Tab—keep the window in focus during play; for streaming, use NVENC and lower bitrate to reduce contention.
 
 ## Conclusion
 

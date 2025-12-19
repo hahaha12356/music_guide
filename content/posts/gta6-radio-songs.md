@@ -49,7 +49,7 @@ Given the setting of Leonida (Florida), we are expecting a heavy influence of La
 
 ## The Vibe Check
 
-毒舌乐评人的电台预判：Tom Petty 的《Love Is A Long Road》把整座城的“公路电影感”一把拉满——公路、落日、心里那点不服输的火；《Ring My Bell》若真上线，迪斯科/放克台就是夜店与街头双栖的节拍中枢，老味儿不土，反而是最耐开。Wishlist 里我最期待的是《Blinding Lights》与《Midnight City》：一个是现代 80s 的霓虹奔跑，一个是合成器的空镜抒情，开在海岸线不说话都能懂游戏要你“活在此刻”。别再堆“网红歌单”，GTA 的电台要的是城市性格——不只是热度，而是场景与情绪的共振：闯祸时听摇滚，兜风时听合成器，热浪里听拉美律动。这些歌，不在于“熟不熟”，而在于“开起来像不像你心里的莱昂尼达”。
+Ruthless radio forecast: Tom Petty’s “Love Is A Long Road” pulls the whole city into a road-movie mood—tarmac, sunset, that stubborn spark. If “Ring My Bell” lands, Disco/Funk isn’t “retro cringe,” it’s the rhythm spine for nightclubs and sidewalks. From the wishlist, “Blinding Lights” and “Midnight City” feel essential: neon sprint vs. synth air-shot—drive the coast in silence and the game still tells you to live in the moment. GTA radio isn’t a hype dump, it’s the city’s personality. You want scene–emotion resonance: rock when you’re causing trouble, synth when you’re cruising, Latin heat for the swampy nights. It isn’t about familiarity—it’s about whether it sounds like Leonida breathing.
 
 ## Why This Matters
 
@@ -70,11 +70,11 @@ Cruising through a digital Miami at sunset just hits different when the right so
 
 ## Before You Play
 
-等电台上线后，别忽视游戏内的音频设置：
-- 把“车内引擎/环境”与“音乐”分开调，音乐 70–80%，保留引擎的速度感；动态范围选择“夜间/家庭”能减少突兀爆音。
-- 关闭“自动音量平衡”，它会把副歌压扁；若你串流，切 DMCA-safe 歌台，避免 VOD 静音。
-- 用车载广播时，别把低频拉太满，城市噪声会与低音打架；耳机巡游则轻抬 8–10kHz，让霓虹更“发亮”。
-- 如果游戏支持“Spotify Link”之类自定义，建议用自己的播放列表做城市场景标签：高速路、海岸线、夜店、暴雨四套，开起来更像电影。
+When the stations go live, don’t sleep on audio settings:
+- Split car engine/ambient from music; keep music ~70–80% so speed still feels alive. Use “Night/Home” dynamic range to tame jump-scares.
+- Disable any auto volume leveling—chorus dynamics get flattened. On stream, stick to DMCA-safe stations to avoid muted VODs.
+- Car speakers: don’t overfill the low-end or city noise will fight your bass. Headphones: lift 8–10 kHz slightly to let neon “sparkle.”
+- If custom playlists (Spotify Link, etc.) are supported, tag scenes—highway, coastline, club, thunderstorm—and swap sets to make drives feel cinematic.
 
 ## Conclusion
 

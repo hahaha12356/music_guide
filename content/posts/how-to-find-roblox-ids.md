@@ -56,11 +56,11 @@ To save you some time, here are some of the most searched tracks right now that 
 
 ## Why These IDs Are Trending
 
-技术宅的筛选逻辑很简单：先看检索面，然后看可用性。像 Doja Cat 的《Paint The Town Red》、Lil Uzi Vert 的《Just Wanna Rock》、Fifty Fifty 的《Cupid (Twin Ver.)》之所以出现在“热榜”，不是因为它们最原版，而是因为有更高几率存在“cover/slow/loop”稳定版本；Roblox 审核会优先保留不直接命中版权的演绎版本。我的做法是：
-- 关键词带上“remix/cover/slowed/loop”，缩小到“Music”分类，先试听确认不是白噪或恶搞。
-- 打开详情页，复制 URL 中的纯数字段；遇到多版本，优先挑时长完整、预览清晰的不失真版本。
-- 同一首歌至少收藏 2–3 个可用 ID，避免某个突然“Content Deleted”就没得放。
-我实测在 Brookhaven 与 Catalog Avatar Creator 中，这几首的稳定率都很高，氛围也到位——一个是社交场合的 banger，一个是跑图状态的节奏驱动，一个是广场舞级别的全民合唱。代码不在多，在“用得住”。
+Tech-nerd filter logic is simple: search breadth first, then survivability. Tracks like Doja Cat’s “Paint The Town Red,” Lil Uzi Vert’s “Just Wanna Rock,” and Fifty Fifty’s “Cupid (Twin Ver.)” trend because stable “cover/slow/loop” versions exist—not because they’re the exact originals. Roblox moderation is friendlier to transformative cuts. My workflow:
+- Add “remix/cover/slowed/loop” to queries, filter to “Music,” and always preview—kill white noise and troll uploads.
+- On the item page, copy only the numeric segment from the URL; for multi-versions, prefer full-length, clean previews with minimal distortion.
+- Save 2–3 working IDs per song so a sudden “Content Deleted” doesn’t brick your set.
+Field-tested in Brookhaven and Catalog Avatar Creator: one is a social banger, one is map-roaming rhythm fuel, one is a crowd-chorus magnet. You don’t need a hundred codes—you need ones that actually play.
 
 ## Why This Matters
 
@@ -81,12 +81,12 @@ Roblox's copyright system is aggressive. A code that is popular today might get 
 
 ## Troubleshooting Tips
 
-复制 ID 后读“无效”的常见坑位：
-- 末尾多了空格或复制了斜杠路径，粘贴前只留纯数字；移动端粘贴最容易夹杂不可见字符。
-- 服务器或游戏关闭了“Copyrighted Audio”，换私服/其他地图测试；
-- Boombox 有冷却/收费机制，没触发播放就误以为代码坏掉；
-- 音量太大直接被你自己扬声器限制到失真，听起来像坏码；先把系统与游戏音量在 60–80% 试放，确认音源正常再调；
-- 若提示“Content Deleted”，别死磕，按上面的方法找 cover/loop 版本，稳定度更高。
+Common “Invalid” gotchas after copy/paste:
+- Trailing spaces or copied slashes—keep only digits. Mobile paste often injects invisible characters.
+- The server/game disables copyrighted audio—test in a private server or another map.
+- Boombox cooldown or paywalls block playback—wait a beat; don’t assume the ID is broken.
+- Your volume is so high the speakers hard-limit and distort—test at 60–80% system/game first, then adjust.
+- If you see “Content Deleted,” don’t stubbornly chase the original—grab a cover/loop variant instead.
 
 ## Conclusion
 

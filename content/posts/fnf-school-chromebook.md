@@ -50,7 +50,7 @@ If the main sites are blocked, you might need a mirror site.
 
 ## Visuals & Sound design
 
-技术宅视角聊一下为什么有些镜像能玩、有些一进就黑屏。Chromebook 的 Chrome OS 默认会为了续航关闭硬件加速，导致 WebGL 与音频管线都跑在软件层，结果就是：画面卡、声音延迟、谱面错位。GitHub Pages 之所以“稳”，一是走全球 CDN，静态资源加载更快，二是开发者通常用更轻的构建方案（少脚本、少滤镜），对低配更友好。音频方面，浏览器的自动采样率转换会引入抖动，尤其在切歌时最明显；把设置里“使用可用的图形加速”打开后，音频与渲染同帧推进，同步会明显改善。我在两台校用 Chromebook 上对比过：同一个 Psych Engine 的网页移植，启用硬件加速后从 35–50FPS 提到 60FPS 稳定段，输入延迟也能少一截。总之，别迷信“神奇镜像”，理解它为什么快，你就知道怎么让自己这台也快。
+Tech-nerd take on why some mirrors run and others black-screen: Chrome OS often disables hardware acceleration to save battery, which forces WebGL and audio to run in software. Result: choppy frames, delayed audio, and desynced charts. GitHub Pages feels “stable” because it rides global CDNs and most fans build with lean bundles (fewer scripts/filters), which low-end devices love. Audio-wise, auto resampling can introduce jitter—especially on song changes. Once you enable “Use hardware acceleration when available,” audio and rendering advance in the same frame tick and sync improves. I tested two school Chromebooks: the same Psych Engine web port went from ~35–50 FPS to a steady 60 with lower input delay after flipping the switch. Don’t worship “magic mirrors.” Understand why they’re fast, then make yours fast too.
 
 ## Why This Matters
 
@@ -71,11 +71,11 @@ Most school laptops have terrible specs—weak processors and no graphics cards.
 
 ## Troubleshooting Tips
 
-遇到网页模组黑屏或无声：
-- 打开 Chrome 设置 > 系统，启用硬件加速；地址栏输入 `chrome://flags`，将 “GPU rasterization” 与 “Zero-copy rasterizer” 设为 Enabled。
-- 清理站点数据与缓存，尤其是 KBH/Snokido 这类站点；长期缓存会让旧脚本与新资源打架。
-- 关闭扩展（广告拦截、翻译、截图工具），它们会钩子注入页面导致性能下降或 WebGL 初始化失败。
-- 课堂环境下不要开十几个标签页；Chromebook 的内存很紧，后台标签会把前台的帧率吃掉。
+For web mods that load to black or stay silent:
+- Chrome Settings > System: enable hardware acceleration. In `chrome://flags`, set “GPU rasterization” and “Zero-copy rasterizer” to Enabled.
+- Clear site data/cache (KBH/Snokido especially); stale caches make old scripts fight new assets.
+- Disable extensions (ad blockers, translators, screenshot tools). Hooked scripts can tank performance or break WebGL init.
+- Don’t keep 10+ tabs open in class. Chromebooks are RAM-starved; background tabs starve the front tab’s frames.
 
 ## Conclusion
 

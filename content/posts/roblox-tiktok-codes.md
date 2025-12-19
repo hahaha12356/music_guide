@@ -43,11 +43,11 @@ Note: Roblox codes can expire or be removed due to copyright issues. If a code d
 
 ## Editor's Top Picks
 
-毒舌乐评人给三首“社交必备”打分：
-- Material Girl：这就是换装/走秀场景的绝配，低频不重、律动清晰，既能让角色动作显得更“亮”，又不会把聊天声压没。
-- Industry Baby：适合“进场宣言”，铜管主题就是气势本身；在广场开播两段，你的造型与存在感会一起被抬高。
-- Levitating：作为混合曲库里的黏合剂，它不抢戏，但能把所有人的脚步与心跳拉到同一拍子上，聊天更顺、合照更好看。
-放什么，不在热度，在“场合”。TikTok 热门的好处是识别度高，但别全放加速版——服务器里不需要一股脑的尖锐高频，需要的是“让大家动起来”的节奏光泽。
+Harsh critic scoring for three social staples:
+- Material Girl: perfect for fashion shows and avatar flexes—light low-end, clean groove; it brightens motion without drowning chat.
+- Industry Baby: pure entrance energy—the brass theme is swagger. Two loops in a plaza and your fit plus presence are instantly boosted.
+- Levitating: the glue track in mixed playlists—doesn’t steal the scene, but syncs footsteps and heartbeats to one pulse, making chat smoother and photos prettier.
+Play for the room, not the hype. TikTok hits bring instant recognition, but don’t spam only sped-up cuts—the server doesn’t need razor highs; it needs a groove that gets people moving.
 
 
 ## 🎧 How to Use These Roblox Music IDs
@@ -61,11 +61,11 @@ If you're new to the Boombox game or just need a refresher, here is how you get 
 
 ## Troubleshooting Tips
 
-遇到“Invalid”或播不出来：
-- 粘贴时多了空格或不可见字符，移动端最常见；只保留数字。
-- 地图禁用了版权音频，试试其他支持 Boombox 的游戏；
-- 你的音量太大导致设备限幅，听起来像坏码；把系统与游戏音量降到 60–80% 再测；
-- 别同场景全部放加速版，久了容易疲劳与被管理员盯；准备一套“正常版 + 轻 Remix”的备选，社交体验会更好。
+If you see “Invalid” or it won’t play:
+- Stray spaces or invisible characters on mobile—keep only digits.
+- The map blocks copyrighted audio—try a Boombox-friendly game.
+- Your volume is too high and the device is hard-limiting—test at 60–80% first.
+- Don’t blast only sped-up edits in the same scene; admins notice and people burn out. Keep a “normal + light remix” pair for better social flow.
 ## Conclusion
 
 Stay tuned to **MusicGuide.life**—I’ll be dropping more FNF mods and soundtrack deep dives later this week. GG!

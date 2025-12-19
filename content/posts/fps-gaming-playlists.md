@@ -51,11 +51,11 @@ Best reserved for the Range or Aim Lab.
 
 ## Editor's Top Picks
 
-毒舌乐评人时间——我日常上分的三套歌单策略：
-- Aggressive Phonk 用在“抢点/爆破前 3 回合”：失真鼓点和压迫低频能把犹豫直接踢出你的脑子，手就是快。别选粗糙的 earrape 版本，挑节奏干净、低频控制得住的，才不会把脚步声掩没。
-- Liquid DnB 是我守点的白月光：鼓组连贯、旋律不挤占注意力，心率维持在“紧张但不抖”的甜蜜区间。Hybrid Minds、Feint 这类“丝滑派”，强烈推荐。
-- 2000s Pop 用来“防倾斜”：队友被虐心态快崩时，开一首人人会唱的回忆杀，团队沟通会恢复得比战术会议还快。是的，Usher 真能救局。
-关键不在“风格猎奇”，而在“节奏治理”：帮你屏蔽杂念，留下枪法。听感要爽，但别干扰信息。
+Ruthless critic mode—three playlist plays I actually climb with:
+- Aggressive Phonk for the first three rounds of hits: distorted kicks and tight low-end delete hesitation so your hands move faster. Skip trash “earrape” cuts; pick clean rhythm with controlled bass so footsteps don’t vanish.
+- Liquid DnB for anchoring sites: drums flow, melodies don’t hijack attention, heart rate stays in the sweet spot—tense but steady. Hybrid Minds and Feint are silky gold here.
+- 2000s Pop to anti-tilt the stack: when morale breaks, a singalong classic revives comms faster than a strat talk. Yes, Usher can clutch.
+The point isn’t genre tourism—it’s rhythm governance. Keep the brain occupied, leave the aim alone. Fun sound, zero info masking.
 
 ## Why This Matters
 
@@ -76,11 +76,11 @@ Entering a **Flow State** is the holy grail of FPS gaming. If you are too relaxe
 
 ## Before You Play
 
-上战前的混音与设备小贴士：
-- 音量：音乐 10–20%，游戏 100%，语音保持清晰；关键回合设置一个一键暂停音乐的热键。
-- EQ：轻微削 80–120Hz 的浑浊，抬 2–4kHz 的脚步与枪声细节；右声道略低 1dB，减少开火时被音乐“顶住”。
-- 设备：优先封闭式耳机，外放只适合娱乐局；若用降噪耳机，开启“通透模式”以免失去环境线索。
-- 平台：串流开麦时避免版权曲库，选择 DMCA-free 歌单，别让 VOD 变静音。键鼠热身配 Lofi，正式排位换 DnB/Phonk，把情绪扳手拧到合适档位。
+Pre-match audio and gear notes:
+- Volume: music at 10–20%, game at 100%, comms crystal. Bind a quick “pause music” hotkey for clutch moments.
+- EQ: gently cut 80–120 Hz mud; lift 2–4 kHz for footstep and shot detail. Drop the right channel ~1 dB to keep music from crowding gunfire.
+- Gear: closed-back headphones > speakers. With ANC cans, enable transparency so you don’t lose environment cues.
+- Platform: use DMCA-free playlists on stream to dodge muted VODs. Warm up to Lofi; swap to DnB/Phonk for ranked to set the emotional gear correctly.
 
 ## Conclusion
 
