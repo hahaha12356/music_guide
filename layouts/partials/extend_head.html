@@ -3,54 +3,28 @@
   .list { background: transparent !important; }
 </style>
 
-{{- with site.Params.background }}
-<style>
-  body {
-    {{- with .color }}background-color: {{ . }};{{ end }}
-    {{- with .image }}background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('{{ . | absURL }}');{{ end }}
-    {{- with .position }}background-position: {{ . }};{{ end }}
-    {{- with .size }}background-size: {{ . }};{{ end }}
-    {{- with .repeat }}background-repeat: {{ . }};{{ end }}
-    {{- with .attachment }}background-attachment: {{ . }};{{ end }}
-  }
-  .main { background: transparent; }
-  .list { background: transparent; }
-  /* subtle texture overlay for readability */
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: -1;
-    background-image:
-      repeating-linear-gradient(0deg, rgba(0,0,0,.04) 0, rgba(0,0,0,.04) 1px, transparent 1px, transparent 4px),
-      repeating-linear-gradient(90deg, rgba(0,0,0,.02) 0, rgba(0,0,0,.02) 1px, transparent 1px, transparent 6px);
-  }
-</style>
-{{- end }}
-
 {{- with site.Params.backgroundLight }}
 <style>
-  [data-theme="light"] body {
-    {{- with .color }}background-color: {{ . }};{{ end }}
-    {{- with .image }}background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url('{{ . | absURL }}');{{ end }}
-    {{- with .position }}background-position: {{ . }};{{ end }}
-    {{- with .size }}background-size: {{ . }};{{ end }}
-    {{- with .repeat }}background-repeat: {{ . }};{{ end }}
-    {{- with .attachment }}background-attachment: {{ . }};{{ end }}
+  html[data-theme="light"] body {
+    {{- with .color }}background-color: {{ . }} !important;{{ end }}
+    {{- with .image }}background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('{{ . | absURL }}') !important;{{ end }}
+    {{- with .position }}background-position: {{ . }} !important;{{ end }}
+    {{- with .size }}background-size: {{ . }} !important;{{ end }}
+    {{- with .repeat }}background-repeat: {{ . }} !important;{{ end }}
+    {{- with .attachment }}background-attachment: {{ . }} !important;{{ end }}
   }
 </style>
 {{- end }}
 
 {{- with site.Params.backgroundDark }}
 <style>
-  [data-theme="dark"] body {
-    {{- with .color }}background-color: {{ . }};{{ end }}
-    {{- with .image }}background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('{{ . | absURL }}');{{ end }}
-    {{- with .position }}background-position: {{ . }};{{ end }}
-    {{- with .size }}background-size: {{ . }};{{ end }}
-    {{- with .repeat }}background-repeat: {{ . }};{{ end }}
-    {{- with .attachment }}background-attachment: {{ . }};{{ end }}
+  html[data-theme="dark"] body {
+    {{- with .color }}background-color: {{ . }} !important;{{ end }}
+    {{- with .image }}background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ . | absURL }}') !important;{{ end }}
+    {{- with .position }}background-position: {{ . }} !important;{{ end }}
+    {{- with .size }}background-size: {{ . }} !important;{{ end }}
+    {{- with .repeat }}background-repeat: {{ . }} !important;{{ end }}
+    {{- with .attachment }}background-attachment: {{ . }} !important;{{ end }}
   }
 </style>
 {{- end }}
