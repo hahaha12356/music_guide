@@ -1,0 +1,20 @@
+{{- if site.Menus.footer }}
+<div class="footer">
+  <nav aria-label="Footer menu">
+    {{- range $index, $item := site.Menus.footer }}
+      <a href="{{ $item.URL | absLangURL }}" title="{{ $item.Title | default $item.Name }}">
+        {{- $item.Pre -}}{{- $item.Name -}}{{- $item.Post -}}
+      </a>
+      {{- if lt (add $index 1) (len site.Menus.footer) -}}
+        <span> · </span>
+      {{- end -}}
+    {{- end }}
+  </nav>
+  {{- with site.Params.footer.linksText }}
+    <span>{{ . | markdownify }}</span>
+  {{- end }}
+  {{- with site.Params.footer.customText }}
+    <span>{{ . | markdownify }}</span>
+  {{- end }}
+</div>
+{{- end }}
