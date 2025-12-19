@@ -77,3 +77,24 @@ home = ["HTML", "RSS", "JSON"]
     name = "🔍 Search"
     url = "/search/"
     weight = 60
+
+# Footer Menu
+[[menu.footer]]
+    name = "About Us"
+    url = "/about/"
+    weight = 10
+
+[[menu.footer]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 20
+
+[[menu.footer]]
+    name = "Privacy Policy"
+    url = "/privacy-policy/"
+    weight = 30
+
+[[menu.footer]]
+    name = "Terms of Service"
+    url = "/terms/"
+    weight = 40
