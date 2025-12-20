@@ -8,17 +8,13 @@
     </div>
 
     <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(var(--primary-rgb), 0.1); border: 1px solid var(--primary); border-radius: 12px; max-width: 520px; margin-left: auto; margin-right: auto;">
-      <h3 style="margin-top: 0; margin-bottom: 1rem; font-size: 1.2rem;">🔍 Verify Roblox ID</h3>
+      <h3 style="margin-top: 0; margin-bottom: 1rem; font-size: 1.2rem;">🎧 ID Quick Launcher</h3>
       <div style="display: flex; gap: 10px;">
-        <input type="number" id="robloxIdInput" placeholder="Enter ID (e.g. 524388229)" style="flex: 1; padding: 10px; border-radius: 6px; border: 1px solid #ccc; background: var(--entry); color: var(--primary);">
-        <select id="robloxIdEndpoint" aria-label="Endpoint" style="padding: 10px; border-radius: 6px; border: 1px solid #ccc; background: var(--entry); color: var(--primary);">
-          <option value="marketplace" selected>Marketplace</option>
-          <option value="catalog">Catalog</option>
-          <option value="library">Library</option>
-        </select>
-        <button onclick="verifyRobloxId()" style="padding: 10px 20px; background: var(--primary); color: var(--theme); border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Check</button>
+        <input type="text" id="robloxInput" placeholder="Paste ID here..." style="flex: 1; padding: 10px; border-radius: 6px; border: 1px solid #ccc; background: var(--entry); color: var(--primary);">
+        <button onclick="openAsset()" style="padding: 10px 16px; background: var(--primary); color: var(--theme); border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">🚀 Open in Roblox</button>
+        <button onclick="searchSong()" style="padding: 10px 16px; background: transparent; color: var(--primary); border: 1px solid var(--primary); border-radius: 6px; cursor: pointer; font-weight: bold;">🔍 Search Song Name instead</button>
       </div>
-      <p style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.5rem; margin-bottom: 0;">Opens official Roblox asset page. Try another endpoint if not found.</p>
+      <p style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.5rem; margin-bottom: 0;">If ID shows "Content Deleted", try searching by name.</p>
     </div>
 
     <footer class="entry-footer">
@@ -27,23 +23,20 @@
 </article>
 
 <script>
-function verifyRobloxId() {
-  const idRaw = document.getElementById('robloxIdInput').value;
-  const endpoint = document.getElementById('robloxIdEndpoint').value;
-  const id = String(idRaw).trim();
-  if (!id) {
-    alert('Please enter a valid ID first!');
-    return;
-  }
-  let url = '';
-  if (endpoint === 'marketplace') {
-    url = `https://create.roblox.com/marketplace/asset/${id}`;
-  } else if (endpoint === 'catalog') {
-    url = `https://www.roblox.com/catalog/${id}`;
+function openAsset() {
+  const val = String(document.getElementById('robloxInput').value || '').trim();
+  if (/^\d+$/.test(val)) {
+    window.open(`https://create.roblox.com/marketplace/asset/${val}`,'_blank');
   } else {
-    url = `https://www.roblox.com/library/${id}`;
+    alert('Please enter a numeric ID to open, or use Search.');
   }
-  window.open(url, '_blank');
+}
+
+function searchSong() {
+  const val = String(document.getElementById('robloxInput').value || '').trim();
+  if (val) {
+    window.open(`https://www.roblox.com/discover/?Keyword=${encodeURIComponent(val)}`,'_blank');
+  }
 }
 </script>
 {{- end -}}
