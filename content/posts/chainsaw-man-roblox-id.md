@@ -20,16 +20,16 @@ Check out this fire list of IDs. I've curated the best openings, endings, and ev
 
 | Song Name | Artist/Source | Roblox ID Code |
 | :--- | :--- | :--- |
-| **Kick Back (Full)** | Kenshi Yonezu | 11306386121 |
+| **Kick Back (Full)** | Kenshi Yonezu | 1841855268 |
 | **Hawatari Nioku Centi** | Maximum the Hormone | 11210452345 |
-| **Tablet** | TOOBOE | 11451489022 |
-| **Chainsaw Blood** | Vaundy | 11182374659 |
-| **Deep Down** | Aimer | 11520394857 |
-| **DOGLAND** | People 1 | 11630293847 |
+| **Tablet** | TOOBOE | 5530025800 |
+| **Chainsaw Blood** | Vaundy | 7733359640 |
+| **Deep Down** | Aimer | 9039582874 |
+| **DOGLAND** | People 1 | 1837276894 |
 | **First Death** | TK from Ling Tosite Sigure | 11720394856 |
-| **Fight Song** | Eve | 11830293845 |
-| **Violence** | Queen Bee | 11940583721 |
-| **In the Back Room** | syudou | 12050394821 |
+| **Fight Song** | Eve | 74542729136955 |
+| **Violence** | Queen Bee | 1837972084 |
+| **In the Back Room** | syudou | 119941648802203 |
 | **Power's Theme** | OST | 11293847562 |
 | **Denji's Daily Life** | OST | 11384756291 |
 

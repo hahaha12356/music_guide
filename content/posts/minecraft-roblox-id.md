@@ -19,19 +19,19 @@ It isn't just about the memes; it’s about audio engineering. C418 (Daniel Rose
 
 | Song Name | Artist/Source | Roblox ID Code |
 | :--- | :--- | :--- |
-| Sweden (Calm 1) | C418 | 1845554017 |
-| Pigstep (Stereo) | Lena Raine | 5472648784 |
-| Wet Hands | C418 | 5815616089 |
-| Cat (Music Disc) | C418 | 1838269705 |
-| Otherside | Lena Raine | 7945032851 |
-| Stal (Funny Jazz) | C418 | 5253604328 |
-| Mice on Venus | C418 | 5468727192 |
-| Subwoofer Lullaby | C418 | 1842823675 |
-| Chirp | C418 | 1838966598 |
-| Relic (New Disc) | Aaron Cherof | 9021045633 |
+| Sweden (Calm 1) | C418 | 118538320533347 |
+| Pigstep (Stereo) | Lena Raine | 98714704601065 |
+| Wet Hands | C418 | 1837716626 |
+| Cat (Music Disc) | C418 | 1839444520 |
+| Otherside | Lena Raine | 1840889981 |
+| Stal (Funny Jazz) | C418 | 9048878939 |
+| Mice on Venus | C418 | 1839661368 |
+| Subwoofer Lullaby | C418 | 9048878170 |
+| Chirp | C418 | 130778180 |
+| Relic (New Disc) | Aaron Cherof | 9047820458 |
 | Haggstrom | C418 | 1846667234 |
-| Mellohi | C418 | 1837059283 |
-| Wait (Where are we now) | C418 | 1843585212 |
+| Mellohi | C418 | 88064123988424 |
+| Wait (Where are we now) | C418 | 1841355754 |
 
 ### Editor's Picks: Technical Breakdown
 

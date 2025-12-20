@@ -21,21 +21,21 @@ Below is the holy grail of ear-shattering audio. These IDs are perfect for boomb
 
 | Song Name / Audio Effect | Artist / Type | Roblox ID Code |
 | :--- | :--- | :--- |
-| Ultimate Ear Destroyer | System Error | 9021038475 |
-| Distorted OOF (Max Volume) | Roblox Meme | 1837465920 |
-| Bass Boosted Windows XP | Microsoft | 7748392011 |
-| Screaming Kid (LOUD) | Unknown | 5566447788 |
-| Air Horn Spam | MLG Soundboard | 1029384756 |
-| Thomas Tank Engine (Distorted) | Bass Boost | 3344556677 |
-| Raining Tacos (Earrape) | Perry Gripp | 9988112233 |
-| Super Loud Siren | Alert System | 1122334455 |
-| Old Town Road (Bass Boost) | Lil Nas X | 6677889900 |
-| Cursed FNF Scream | Friday Night Funkin | 4433221100 |
-| Monster Mash (Distorted) | Halloween | 1231231234 |
-| Soviet Anthem (Loudest Ver) | Meme | 5675675678 |
-| High Pitch Squeal | FX | 9090909090 |
-| Broken Speaker Test | Tech | 3322115566 |
-| Vine Boom (Spam Loop) | Vine | 8877665544 |
+| Ultimate Ear Destroyer | System Error | 1837824826 |
+| Distorted OOF (Max Volume) | Roblox Meme | 1843871664 |
+| Bass Boosted Windows XP | Microsoft | 4575953237 |
+| Screaming Kid (LOUD) | Unknown | 626777433 |
+| Air Horn Spam | MLG Soundboard | 9113073742 |
+| Thomas Tank Engine (Distorted) | Bass Boost | 111464178744517 |
+| Raining Tacos (Earrape) | Perry Gripp | 1848329132 |
+| Super Loud Siren | Alert System | 138221067 |
+| Old Town Road (Bass Boost) | Lil Nas X | 1841358800 |
+| Cursed FNF Scream | Friday Night Funkin | 1835848459 |
+| Monster Mash (Distorted) | Halloween | 1845732793 |
+| Soviet Anthem (Loudest Ver) | Meme | 1837130635 |
+| High Pitch Squeal | FX | 1841140365 |
+| Broken Speaker Test | Tech | 1841118108 |
+| Vine Boom (Spam Loop) | Vine | 1837202355 |
 
 ## The Vibe Check
 

@@ -19,18 +19,18 @@ Why are we still talking about singing toilets in December 2025? Because DaFuq!?
 
 | Song Name | Artist/Source | Roblox ID Code |
 | :--- | :--- | :--- |
-| Skibidi Dop Dop Yes Yes (Original) | Biser King | 1427823541 |
-| Everybody Wants To Rule The World (Remix) | Tears for Fears / Skibidi | 1583009282 |
-| Skibidi Toilet Phonk Remix | TikTok | 6480029314 |
-| Titan Speakerman Theme | DaFuq!?Boom! | 7329901221 |
-| G-Man Toilet Boss Music | Distorted | 5991836021 |
-| Skibidi Bop Yes Yes (Loud) | Meme | 1353080455 |
-| Give It To Me (Instrumental) | Timbaland | 4956637842 |
-| Cameraman Sad Theme | Emotional Damage | 160442087 |
-| Skibidi War Drums | Epic Version | 5410086218 |
-| Dom Dom Yes Yes (Bass Boosted) | Biser King | 1572985863 |
-| Scientist Toilet Theme | Dark Techno | 5639659024 |
-| Skibidi x Usher Mashup | Remix | 5043650201 |
+| Skibidi Dop Dop Yes Yes (Original) | Biser King | 84571048105709 |
+| Everybody Wants To Rule The World (Remix) | Tears for Fears / Skibidi | 1837146892 |
+| Skibidi Toilet Phonk Remix | TikTok | 16190757458 |
+| Titan Speakerman Theme | DaFuq!?Boom! | 1847811882 |
+| G-Man Toilet Boss Music | Distorted | 9045162666 |
+| Skibidi Bop Yes Yes (Loud) | Meme | 6751386470 |
+| Give It To Me (Instrumental) | Timbaland | 785301837 |
+| Cameraman Sad Theme | Emotional Damage | 440794203 |
+| Skibidi War Drums | Epic Version | 18519134957 |
+| Dom Dom Yes Yes (Bass Boosted) | Biser King | 7665931407 |
+| Scientist Toilet Theme | Dark Techno | 800952230 |
+| Skibidi x Usher Mashup | Remix | 9045150920 |
 
 ### Editor's Picks: Top Tier Cringe
 

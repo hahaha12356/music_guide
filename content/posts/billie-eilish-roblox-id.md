@@ -19,18 +19,18 @@ Billie's discography is practically the soundtrack of modern Roblox culture, spe
 
 | Song Name | Artist/Source | Roblox ID Code |
 | :--- | :--- | :--- |
-| Bad Guy (Original) | Billie Eilish | 3015696923 |
-| Lovely (feat. Khalid) | Billie Eilish | 1494586676 |
-| Ocean Eyes | Billie Eilish | 1321038120 |
-| Happier Than Ever (Rock Edit) | Billie Eilish | 6942055102 |
-| Bury a Friend | Billie Eilish | 2866642944 |
-| No Time To Die | Billie Eilish | 4739201582 |
-| Everything I Wanted | Billie Eilish | 4428882314 |
-| NDA (Clean) | Billie Eilish | 7055193821 |
-| Bellyache | Billie Eilish | 863955621 |
-| Copycat | Billie Eilish | 913254587 |
-| Therefore I Am | Billie Eilish | 5991836021 |
-| Ilomilo | Billie Eilish | 4956637842 |
+| Bad Guy (Original) | Billie Eilish | 1839954256 |
+| Lovely (feat. Khalid) | Billie Eilish | Lovely |
+| Ocean Eyes | Billie Eilish | 5410085296 |
+| Happier Than Ever (Rock Edit) | Billie Eilish | 95804323052789 |
+| Bury a Friend | Billie Eilish | 113481078880188 |
+| No Time To Die | Billie Eilish | 1835352575 |
+| Everything I Wanted | Billie Eilish | 131235692174683 |
+| NDA (Clean) | Billie Eilish | 101923295592013 |
+| Bellyache | Billie Eilish | 116774432573914 |
+| Copycat | Billie Eilish | 1847343222 |
+| Therefore I Am | Billie Eilish | 85783590649314 |
+| Ilomilo | Billie Eilish | 95552268405677 |
 
 ### Editor's Picks: Analyzing the Best Tracks
 

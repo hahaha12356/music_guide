@@ -20,18 +20,18 @@ Here is the curated list of fire tracks to turn your Boombox into a legendary ar
 
 | Song Name | Artist/Source | Roblox ID Code |
 | :--- | :--- | :--- |
-| **Blue Bird** | Naruto Shippuden | 135760827 |
-| **Silhouette** | KANA-BOON (Naruto) | 1461413155 |
-| **Overtaken (Drums of Liberation)** | One Piece | 150036102 |
+| **Blue Bird** | Naruto Shippuden | 1844789950 |
+| **Silhouette** | KANA-BOON (Naruto) | 1837463327 |
+| **Overtaken (Drums of Liberation)** | One Piece | 144547902 |
 | **We Are!** | Hiroshi Kitadani (One Piece) | 144547902 |
 | **Gurenge** | LiSA (Demon Slayer) | 4911762293 |
-| **Unravel** | Tokyo Ghoul | 154140830 |
+| **Unravel** | Tokyo Ghoul | 8269391552 |
 | **Hero's Come Back!!** | Naruto Shippuden | 145100084 |
 | **Bink's Sake** | One Piece | 540134468 |
 | **The Raising Fighting Spirit** | Naruto | 142461141 |
 | **Brave Shine** | Fate/stay night | 250325141 |
-| **Sign** | FLOW (Naruto) | 262334033 |
-| **The Very, Very, Very Strongest** | One Piece | 150036105 |
+| **Sign** | FLOW (Naruto) | 1836994617 |
+| **The Very, Very, Very Strongest** | One Piece | 7000805359 |
 
 ### 1. Silhouette (Naruto Shippuden)
 If you don't start instinctively Naruto-running the second this beat drops, are you even a fan? This is the goated anthem for any boss fight. It’s got that "I’m about to win with the power of friendship" energy that makes every hit feel 10x more powerful. Perfect for when you're about to drop a massive combo on some unsuspecting player.

@@ -19,19 +19,19 @@ It’s actually scary how good this soundtrack is. Even in 2025, a decade after 
 
 | Song Name | Artist/Source | Roblox ID Code |
 | :--- | :--- | :--- |
-| Megalovania (Original) | Toby Fox | 1845554017 |
-| Spider Dance | Toby Fox | 1838269705 |
-| Bonetrousle (Papyrus Theme) | Toby Fox | 5472648784 |
-| Hopes and Dreams | Toby Fox | 1842823675 |
-| Death by Glamour | Toby Fox | 1838966598 |
-| Fallen Down (Reprise) | Toby Fox | 5253604328 |
-| Spear of Justice | Toby Fox | 5815616089 |
-| Temmie Village | Toby Fox | 1846667234 |
-| Megalovania (Earrape/Loud) | Meme | 5468727192 |
-| Ghost Fight (Napstablook) | Toby Fox | 1837059283 |
-| Heartache (Toriel Theme) | Toby Fox | 9021045633 |
-| Dummy! | Toby Fox | 1843585212 |
-| Battle Against a True Hero | Toby Fox | 7945032851 |
+| Megalovania (Original) | Toby Fox | 6516202633 |
+| Spider Dance | Toby Fox | 5772118047 |
+| Bonetrousle (Papyrus Theme) | Toby Fox | 74403420547086 |
+| Hopes and Dreams | Toby Fox | 87857369891926 |
+| Death by Glamour | Toby Fox | 9039416629 |
+| Fallen Down (Reprise) | Toby Fox | 9040655467 |
+| Spear of Justice | Toby Fox | 1840050088 |
+| Temmie Village | Toby Fox | 5844872042 |
+| Megalovania (Earrape/Loud) | Meme | 128830409645703 |
+| Ghost Fight (Napstablook) | Toby Fox | 94494416095572 |
+| Heartache (Toriel Theme) | Toby Fox | 133739139837251 |
+| Dummy! | Toby Fox | 82414470513135 |
+| Battle Against a True Hero | Toby Fox | 9046166376 |
 
 ### Editor's Picks: The Meme Lord's Choice
 

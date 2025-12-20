@@ -21,17 +21,17 @@ Why do we love distorted audio? Because it’s HILARIOUS. It’s the ultimate fl
 | Song Name | Artist/Source | Roblox ID Code |
 | :--- | :--- | :--- |
 | Raining Tacos (Nuclear Bass) | Parry Gripp Remix | 142376088 |
-| Thomas the Tank Engine (Earrape) | Meme Classic | 488472970 |
-| Air Horn Spam (Max Volume) | MLG Sound | 255577236 |
-| SpongeBob Trap Remix (Loud) | SpongeBob | 5639659024 |
-| Soviet Anthem (Distorted) | Meme | 1583009282 |
-| OOF! (1000x Volume) | Roblox Sound | 5991836021 |
-| Screaming Man | Unknown | 1353080455 |
-| Windows XP Error (Loud) | Microsoft | 5906660370 |
-| Monster Inc. Earrape | Disney/Pixar | 6480029314 |
-| Siren Alarm (Purge) | Sound Effect | 160442087 |
-| Fart Reverb (Bass Boosted) | Meme | 5410086218 |
-| It's Everyday Bro (Distorted) | Jake Paul | 4956637842 |
+| Thomas the Tank Engine (Earrape) | Meme Classic | 7042539950 |
+| Air Horn Spam (Max Volume) | MLG Sound | 172747495 |
+| SpongeBob Trap Remix (Loud) | SpongeBob | 9061674082 |
+| Soviet Anthem (Distorted) | Meme | 8904888220 |
+| OOF! (1000x Volume) | Roblox Sound | 6606409554 |
+| Screaming Man | Unknown | 5547402455 |
+| Windows XP Error (Loud) | Microsoft | 6708746263 |
+| Monster Inc. Earrape | Disney/Pixar | 6835794541 |
+| Siren Alarm (Purge) | Sound Effect | 152856723 |
+| Fart Reverb (Bass Boosted) | Meme | 2831167712 |
+| It's Everyday Bro (Distorted) | Jake Paul | 15020410870 |
 
 ### Editor's Picks: GOATED Trolling Songs
 

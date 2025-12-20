@@ -19,18 +19,18 @@ Look, Roblox isn't just a game engine; it's a meme factory. In 2025, audio troll
 
 | Song Name | Artist/Source | Roblox ID Code |
 | :--- | :--- | :--- |
-| Never Gonna Give You Up | Rick Astley | 1572985863 |
-| Mii Channel Theme | Nintendo | 1445799986 |
-| OOF! (Remix) | Roblox Classic | 5991836021 |
-| Spooky Scary Skeletons | Andrew Gold | 160442087 |
-| It's Raining Tacos | Parry Gripp | 142376088 |
-| Crab Rave (Loud) | Noisestorm | 5410086218 |
-| Among Us Drip Theme | Internet Meme | 6486253457 |
-| Sad Violin (Tiny Violin) | Meme Classic | 135308045 |
-| Windows XP Error Remix | Microsoft | 5906660370 |
-| Coffin Dance | Astronomia | 4956637842 |
-| Bruh Sound Effect #2 | Vine | 5043650201 |
-| SpongeBob Trap Remix | SpongeBob | 5639659024 |
+| Never Gonna Give You Up | Rick Astley | 1838569831 |
+| Mii Channel Theme | Nintendo | 81891694008851 |
+| OOF! (Remix) | Roblox Classic | 79348298352567 |
+| Spooky Scary Skeletons | Andrew Gold | 1837803400 |
+| It's Raining Tacos | Parry Gripp | 1847313950 |
+| Crab Rave (Loud) | Noisestorm | 1836271798 |
+| Among Us Drip Theme | Internet Meme | 9040348386 |
+| Sad Violin (Tiny Violin) | Meme Classic | 9043598673 |
+| Windows XP Error Remix | Microsoft | 9114625745 |
+| Coffin Dance | Astronomia | 9039324990 |
+| Bruh Sound Effect #2 | Vine | 6349641063 |
+| SpongeBob Trap Remix | SpongeBob | 4275842574 |
 
 ### Editor's Picks: Top Tier Trolling
 

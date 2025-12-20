@@ -25,17 +25,17 @@ Here is the curated list of the absolute best tracks to blast right now.
 
 | Song Name (TikTok Hit) | Artist | Roblox ID Code |
 | :--- | :--- | :--- |
-| **Pink Soldiers (Squid Game)** | Boris Way | 7943962035 |
-| **Material Girl** | Madonna | 6473620984 |
-| **Say So** | Doja Cat | 5211168716 |
-| **Industry Baby** | Lil Nas X | 7253841629 |
-| **ABCDEFU** | GAYLE | 8272930211 |
-| **Heat Waves** | Glass Animals | 6432181830 |
-| **Stay** | Justin Bieber | 6983052670 |
-| **Good 4 U** | Olivia Rodrigo | 6844912719 |
-| **Dance Monkey** | Tones and I | 4256226685 |
-| **Astronaut In The Ocean** | Masked Wolf | 6463339088 |
-| **Levitating** | Dua Lipa | 6516666870 |
+| **Pink Soldiers (Squid Game)** | Boris Way | 122281336542545 |
+| **Material Girl** | Madonna | 8540538728 |
+| **Say So** | Doja Cat | 1840036018 |
+| **Industry Baby** | Lil Nas X | 1840287757 |
+| **ABCDEFU** | GAYLE | 1836322047 |
+| **Heat Waves** | Glass Animals | 1839057319 |
+| **Stay** | Justin Bieber | 1844716978 |
+| **Good 4 U** | Olivia Rodrigo | 7029051434 |
+| **Dance Monkey** | Tones and I | 1837335907 |
+| **Astronaut In The Ocean** | Masked Wolf | 9047881210 |
+| **Levitating** | Dua Lipa | 9048050438 |
 
 Note: Roblox codes can expire or be removed due to copyright issues. If a code doesn't work, please try the next one on the list! We update this table monthly.
 

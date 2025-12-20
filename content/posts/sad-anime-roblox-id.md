@@ -20,21 +20,21 @@ I’ve compiled the most stable IDs currently available. Note that while these w
 
 | Song Name | Artist/Source | Roblox ID Code |
 | :--- | :--- | :--- |
-| **Unravel (Acoustic)** | Tokyo Ghoul | 1541408303 |
-| **Orange (Ending 2)** | Your Lie in April | 415361305 |
-| **Nandemonaiya** | Your Name (Kimi no Na wa) | 511036531 |
-| **Secret Base (10 Years After Ver.)** | Anohana | 344845110 |
-| **Isabella's Lullaby** | The Promised Neverland | 2901306354 |
-| **Guts Theme (Berserk)** | Susumu Hirasawa | 553097130 |
-| **Sadness and Sorrow** | Naruto | 142461141 |
-| **Glassy Sky** | Tokyo Ghoul | 218204691 |
-| **Lost My Pieces** | Toradora! | 205677041 |
-| **Ichiban no Takaramono** | Angel Beats! | 158223565 |
-| **Katawaredoki** | Your Name | 511110058 |
-| **Lilium** | Elfen Lied | 144653655 |
-| **Decretum (Sayaka’s Theme)** | Madoka Magica | 148152504 |
-| **Continued Story** | Code Geass | 145151525 |
-| **Sparkle** | Radwimps | 506933512 |
+| **Unravel (Acoustic)** | Tokyo Ghoul | 8269391552 |
+| **Orange (Ending 2)** | Your Lie in April | Orange |
+| **Nandemonaiya** | Your Name (Kimi no Na wa) | 1837697591 |
+| **Secret Base (10 Years After Ver.)** | Anohana | 9040590869 |
+| **Isabella's Lullaby** | The Promised Neverland | 9060588339 |
+| **Guts Theme (Berserk)** | Susumu Hirasawa | 1837843720 |
+| **Sadness and Sorrow** | Naruto | 1837814958 |
+| **Glassy Sky** | Tokyo Ghoul | 9125446919 |
+| **Lost My Pieces** | Toradora! | 128446469011624 |
+| **Ichiban no Takaramono** | Angel Beats! | 9042969140 |
+| **Katawaredoki** | Your Name | 86548858187541 |
+| **Lilium** | Elfen Lied | 137628523455097 |
+| **Decretum (Sayaka’s Theme)** | Madoka Magica | 83089457736765 |
+| **Continued Story** | Code Geass | 79609176307084 |
+| **Sparkle** | Radwimps | 78232307701371 |
 
 ### 1. Guts Theme (Berserk)
 This is the gold standard for "contemplative grinding." It’s a low-fidelity masterpiece that fits perfectly in any dark-fantasy RPG or even a simple hangout game. It’s not over-the-top; it just sits in the background and sets a mature tone. I highly recommend this if you're tired of the high-pitched vocals found in most anime OSTs.

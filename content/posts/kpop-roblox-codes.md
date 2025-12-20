@@ -19,19 +19,19 @@ Why is K-Pop the meta in 2025? Because the energy is unmatched! You cannot tell 
 
 | Song Name | Artist/Source | Roblox ID Code |
 | :--- | :--- | :--- |
-| Butter (Hotter Remix) | BTS | 6844937210 |
-| Pink Venom | BLACKPINK | 1056483921 |
-| The Feels | TWICE | 7842019483 |
-| Dynamite | BTS | 5632840912 |
-| Kill This Love | BLACKPINK | 3015696923 |
-| Fancy | TWICE | 3134674982 |
-| Mic Drop (Steve Aoki Remix) | BTS | 1245678901 |
-| How You Like That | BLACKPINK | 5293847102 |
-| God's Menu | Stray Kids | 5410086218 |
-| Love Dive | IVE | 9182736450 |
-| Ditto | NewJeans | 1122334455 |
-| Antifragile | LE SSERAFIM | 6677889900 |
-| Queencard | (G)I-DLE | 9988776655 |
+| Butter (Hotter Remix) | BTS | 9067257133 |
+| Pink Venom | BLACKPINK | 1841425090 |
+| The Feels | TWICE | 1836393197 |
+| Dynamite | BTS | 1847199233 |
+| Kill This Love | BLACKPINK | 1841443579 |
+| Fancy | TWICE | 9048663036 |
+| Mic Drop (Steve Aoki Remix) | BTS | 6494785114 |
+| How You Like That | BLACKPINK | 301022204 |
+| God's Menu | Stray Kids | 98820203840242 |
+| Love Dive | IVE | 1839251961 |
+| Ditto | NewJeans | 132819539606733 |
+| Antifragile | LE SSERAFIM | 75625195150862 |
+| Queencard | (G)I-DLE | 73577213692147 |
 
 ### Editor's Picks: Absolute Bangers Only
 
