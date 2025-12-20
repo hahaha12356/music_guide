@@ -1,0 +1,61 @@
+<!-- Cyberpunk Music Widget -->
+<div id="music-widget" style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; display: flex; align-items: center; gap: 10px; background: rgba(0, 0, 0, 0.8); padding: 10px; border-radius: 50px; border: 2px solid #00f3ff; box-shadow: 0 0 10px #00f3ff; transition: all 0.3s ease;">
+  <!-- Play/Pause Button with Vinyl Animation -->
+  <div id="play-btn" onclick="toggleMusic()" style="width: 40px; height: 40px; border-radius: 50%; background: #111; border: 2px solid #fff; cursor: pointer; position: relative; display: flex; align-items: center; justify-content: center; animation: none;">
+    <span id="play-icon" style="font-size: 14px; color: #fff;">▶</span>
+  </div>
+
+  <!-- Scrolling Text -->
+  <div style="overflow: hidden; width: 0; transition: width 0.5s ease; white-space: nowrap;" id="music-info">
+    <span style="color: #00f3ff; font-family: monospace; font-size: 12px;">🎵 Lo-fi Gaming Chill Beats</span>
+  </div>
+
+  <audio id="bg-music" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3" type="audio/mp3">
+    <!-- 这是一个免费无版权的 Lo-fi 音乐链接 -->
+  </audio>
+</div>
+
+<script>
+  const musicWidget = document.getElementById('music-widget');
+  const musicInfo = document.getElementById('music-info');
+  const audio = document.getElementById('bg-music');
+  const playBtn = document.getElementById('play-btn');
+  const playIcon = document.getElementById('play-icon');
+  let isPlaying = false;
+
+  // 鼠标悬停展开歌名
+  musicWidget.addEventListener('mouseenter', () => {
+    musicInfo.style.width = '160px';
+  });
+  musicWidget.addEventListener('mouseleave', () => {
+    if (!isPlaying) musicInfo.style.width = '0';
+  });
+
+  function toggleMusic() {
+    if (isPlaying) {
+      audio.pause();
+      playIcon.innerText = "▶";
+      playBtn.style.animation = "none";
+      musicInfo.style.width = '0';
+    } else {
+      audio.play();
+      playIcon.innerText = "II";
+      // 旋转动画
+      playBtn.style.animation = "spin 2s linear infinite";
+      musicInfo.style.width = '160px';
+    }
+    isPlaying = !isPlaying;
+  }
+</script>
+
+<style>
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  /* 移动端适配：变小一点 */
+  @media (max-width: 768px) {
+    #music-widget { bottom: 10px; left: 10px; transform: scale(0.8); transform-origin: bottom left; }
+  }
+</style>
