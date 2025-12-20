@@ -7,14 +7,14 @@
         {{ .Content | markdownify }}
     </div>
 
-    <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(var(--primary-rgb), 0.1); border: 1px solid var(--primary); border-radius: 12px; max-width: 520px; margin-left: auto; margin-right: auto;">
-      <h3 style="margin-top: 0; margin-bottom: 1rem; font-size: 1.2rem;">🎧 ID Quick Launcher</h3>
-      <div style="display: flex; gap: 10px;">
-        <input type="text" id="robloxInput" placeholder="Paste ID here..." style="flex: 1; padding: 10px; border-radius: 6px; border: 1px solid #ccc; background: var(--entry); color: var(--primary);">
-        <button onclick="openAsset()" style="padding: 10px 16px; background: var(--primary); color: var(--theme); border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">🚀 Open in Roblox</button>
-        <button onclick="searchSong()" style="padding: 10px 16px; background: transparent; color: var(--primary); border: 1px solid var(--primary); border-radius: 6px; cursor: pointer; font-weight: bold;">🔍 Search Song Name instead</button>
+    <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(var(--primary-rgb), 0.1); border: 1px solid var(--primary); border-radius: 12px; max-width: 450px; margin-left: auto; margin-right: auto; box-shadow: 0 4px 15px rgba(0,0,0,0.12);">
+      <h3 style="margin-top: 0; margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">🎧 Roblox Audio Finder</h3>
+      <input type="text" id="robloxInput" placeholder="Paste ID (e.g. 1848354536) or Song Name" style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #555; background: var(--entry); color: var(--primary); font-family: monospace;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <button onclick="launchID()" style="padding: 12px; background: var(--primary); color: var(--theme); border: none; border-radius: 8px; cursor: pointer; font-weight: bold; transition: opacity 0.2s;">🚀 Launch ID</button>
+        <button onclick="searchCatalog()" style="padding: 12px; background: transparent; border: 2px solid var(--primary); color: var(--primary); border-radius: 8px; cursor: pointer; font-weight: bold; transition: all 0.2s;">🔎 Search Audio</button>
       </div>
-      <p style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.5rem; margin-bottom: 0;">If ID shows "Content Deleted", try searching by name.</p>
+      <p style="font-size: 0.75rem; opacity: 0.7; margin-top: 10px; text-align: center;">If an ID doesn't work, use "Search Audio" to find a working version.</p>
     </div>
 
     <footer class="entry-footer">
@@ -23,19 +23,21 @@
 </article>
 
 <script>
-function openAsset() {
+function launchID() {
   const val = String(document.getElementById('robloxInput').value || '').trim();
   if (/^\d+$/.test(val)) {
-    window.open(`https://create.roblox.com/marketplace/asset/${val}`,'_blank');
+    window.open(`https://www.roblox.com/library/${val}/`,'_blank');
   } else {
-    alert('Please enter a numeric ID to open, or use Search.');
+    alert("Please enter a numeric ID to open, or use 'Search Audio' to search by name.");
   }
 }
 
-function searchSong() {
+function searchCatalog() {
   const val = String(document.getElementById('robloxInput').value || '').trim();
   if (val) {
-    window.open(`https://www.roblox.com/discover/?Keyword=${encodeURIComponent(val)}`,'_blank');
+    window.open(`https://www.roblox.com/catalog?Category=Audio&Keyword=${encodeURIComponent(val)}`,'_blank');
+  } else {
+    alert('Please enter a song name or ID to search.');
   }
 }
 </script>
