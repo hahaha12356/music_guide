@@ -50,7 +50,7 @@ home = ["HTML", "RSS", "JSON"]
 
     [params.homeInfoParams]
         Title = "Welcome to MusicGuide.life"
-        Content = "Discover Roblox audio IDs, FNF mods, and game soundtracks. Use the tool below to quickly verify any Roblox ID."
+        Content = "The #1 Tool for Roblox Music Codes & FNF Mods. Verify IDs, generate Boombox guides, and find the latest trending audio in 2025. Made by gamers, for gamers."
 
     # 搜索配置 (Fuse.js)
     [params.fuseOpts]
