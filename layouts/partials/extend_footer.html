@@ -8,9 +8,9 @@
   <audio id="bg-music" loop playsinline></audio>
   <div class="turntable" style="display:flex; align-items:center; gap:8px;">
     <div class="deck" style="position:relative; width:72px; height:72px; display:flex; align-items:center; justify-content:center;">
-      <div class="disc" style="width:64px; height:64px; border-radius:50%; background: radial-gradient(circle at 30% 30%, #202020 0%, #121212 40%, #0a0a0a 70%, #090909 100%), repeating-radial-gradient(circle, rgba(255,255,255,0.06) 0px, rgba(255,255,255,0.06) 1px, rgba(0,0,0,0) 2px, rgba(0,0,0,0) 4px); box-shadow: inset 0 0 6px rgba(255,255,255,0.06); position:relative; overflow:hidden;"></div>
+      <div class="disc" style="width:64px; height:64px; border-radius:50%; background: radial-gradient(circle at 30% 30%, #1f1f1f 0%, #151515 40%, #0c0c0c 70%, #0a0a0a 100%), repeating-radial-gradient(circle, rgba(255,255,255,0.08) 0px, rgba(255,255,255,0.08) 1px, rgba(0,0,0,0) 2px, rgba(0,0,0,0) 5px); box-shadow: inset 0 0 10px rgba(255,255,255,0.08), inset 0 0 4px rgba(0,243,255,0.15); position:relative; overflow:hidden;"></div>
       <div class="spindle" style="position:absolute; width:6px; height:6px; border-radius:50%; background:#e33; box-shadow: 0 0 6px #e33;"></div>
-      <div id="tonearm" style="position:absolute; width:70px; height:5px; background: linear-gradient(90deg, #cfcfcf, #8b8b8b); top:4px; right:-6px; transform-origin: 6px 2.5px; transform: rotate(-32deg); transition: transform 0.25s ease; border-radius:3px; box-shadow: 0 0 6px rgba(255,255,255,0.2); cursor:pointer;"></div>
+      <div id="tonearm" style="position:absolute; width:70px; height:5px; background: linear-gradient(90deg, #cfcfcf, #8b8b8b); top:4px; right:-6px; transform-origin: 6px 2.5px; transform: rotate(-38deg); transition: transform 0.35s ease; border-radius:3px; box-shadow: 0 0 6px rgba(255,255,255,0.25); cursor:pointer;"></div>
       <span id="play-hint" style="position:absolute; top:74px; left:0; font-size:10px; color:#00f3ff; opacity:0.9;">Click needle to play</span>
     </div>
     <button id="expand-btn" aria-label="Expand player" style="width:22px; height:22px; border:none; background:transparent; color:#00f3ff; cursor:pointer; font-size:16px; line-height:22px;">▶</button>
@@ -50,12 +50,40 @@
   let proxyIndex = -1;
   let noteTimer = null;
 
-  const defaultSrc = 'https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3';
+  const defaultSrc = '/audio/roblox-style.mp3';
   originalUrl = defaultSrc;
   audio.src = originalUrl;
   audio.preload = 'auto';
 
   const LS_KEY = 'music_recent_urls';
+  const localFallback = '/audio/roblox-style.mp3';
+  const PROXIES = [
+    (u) => `https://cors.isomorphic-git.org/${u}`,
+    (u) => `https://thingproxy.freeboard.io/fetch/${u}`,
+    (u) => `https://corsproxy.io/?${encodeURIComponent(u)}`,
+  ];
+  function isRemote(u) { return /^https?:\/\//i.test(u); }
+  function normalizeUrl(u) {
+    if (!/^https?:\/\//i.test(u)) return `https://${u}`;
+    return u;
+  }
+  function tryNextProxy() {
+    proxyIndex++;
+    if (proxyIndex >= PROXIES.length || !isRemote(originalUrl)) {
+      errEl.textContent = 'Using local fallback.';
+      errEl.style.display = 'inline';
+      audio.src = localFallback;
+      audio.load();
+      play();
+      return;
+    }
+    const proxied = PROXIES[proxyIndex](originalUrl);
+    errEl.textContent = `Proxying... (${proxyIndex + 1}/${PROXIES.length})`;
+    errEl.style.display = 'inline';
+    audio.src = proxied;
+    audio.load();
+    play();
+  }
   function fmt(s) {
     const m = Math.floor(s / 60).toString().padStart(2, '0');
     const sec = Math.floor(s % 60).toString().padStart(2, '0');
@@ -115,7 +143,8 @@
     expandBtn.textContent = shown ? '▶' : '✕';
   });
   loadBtn.addEventListener('click', () => {
-    const v = normalizeUrl(urlInput.value.trim());
+    const vRaw = urlInput.value.trim();
+    const v = isRemote(vRaw) ? normalizeUrl(vRaw) : vRaw;
     if (!v) return;
     originalUrl = v;
     proxyIndex = -1;
@@ -175,43 +204,16 @@
     100% { transform: rotate(360deg); }
   }
   #music-widget .disc.spin { animation: spin 3s linear infinite; }
-  #tonearm.down { transform: rotate(8deg); }
+  #tonearm.down { transform: rotate(12deg); }
   #music-widget:hover { filter: drop-shadow(0 0 6px #00f3ff); }
   #play-hint { animation: pulse 1.2s ease-in-out infinite; }
   @keyframes pulse { 0%{opacity:0.35} 50%{opacity:0.95} 100%{opacity:0.35} }
   .deck .disc { z-index: 1; }
   #tonearm { z-index: 2; pointer-events: auto; }
-  .disc .note { position:absolute; bottom: 18px; font-size:12px; color:#00f3ff; animation: noteUp 1.6s ease-out forwards; text-shadow:0 0 6px #00f3ff; }
-  @keyframes noteUp { 0%{ transform: translateY(0) rotate(0deg); opacity:0.2; } 50%{ opacity:0.9; } 100%{ transform: translateY(-28px) rotate(12deg); opacity:0; } }
+  .disc .note { position:absolute; bottom: 12px; font-size:14px; color:#00f3ff; animation: noteUp 1.8s ease-out forwards; text-shadow:0 0 6px #00f3ff; }
+  @keyframes noteUp { 0%{ transform: translateY(0) translateX(0) rotate(0deg); opacity:0.25; } 50%{ opacity:0.95; } 100%{ transform: translateY(-40px) translateX(-6px) rotate(15deg); opacity:0; } }
   /* 移动端适配：变小一点 */
   @media (max-width: 768px) {
     #music-widget { bottom: 10px; left: 10px; transform: scale(0.85); transform-origin: bottom left; }
   }
 </style>
-  const localFallback = '/audio/roblox-style.mp3';
-  const PROXIES = [
-    (u) => `https://cors.isomorphic-git.org/${u}`,
-    (u) => `https://thingproxy.freeboard.io/fetch/${u}`,
-    (u) => `https://corsproxy.io/?${encodeURIComponent(u)}`,
-  ];
-  function normalizeUrl(u) {
-    if (!/^https?:\/\//i.test(u)) return `https://${u}`;
-    return u;
-  }
-  function tryNextProxy() {
-    proxyIndex++;
-    if (proxyIndex >= PROXIES.length) {
-      errEl.textContent = 'Using local fallback if available.';
-      errEl.style.display = 'inline';
-      audio.src = localFallback;
-      audio.load();
-      play();
-      return;
-    }
-    const proxied = PROXIES[proxyIndex](originalUrl);
-    errEl.textContent = `Proxying... (${proxyIndex + 1}/${PROXIES.length})`;
-    errEl.style.display = 'inline';
-    audio.src = proxied;
-    audio.load();
-    play();
-  }
