@@ -1,0 +1,137 @@
+<div class="profile">
+    {{- with site.Params.profileMode }}
+    <div class="profile_inner">
+        {{- if .imageUrl -}}
+        {{- $img := "" }}
+        {{- if not (urls.Parse .imageUrl).IsAbs }}
+            {{- $img = resources.Get .imageUrl }}
+        {{- end }}
+        {{- if $img }}
+            {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
+            {{- if hugo.IsExtended -}}
+                {{- $processableFormats = $processableFormats | append "webp" -}}
+            {{- end -}}
+            {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
+            {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
+                {{- if (not (and (not .imageHeight) (not .imageWidth))) }}
+                    {{- $img = $img.Resize (printf "%dx%d" .imageWidth .imageHeight) }}
+                {{- else if .imageHeight }}
+                    {{- $img = $img.Resize (printf "x%d" .imageHeight) }}
+                {{ else if .imageWidth }}
+                    {{- $img = $img.Resize (printf "%dx" .imageWidth) }}
+                {{ else }}
+                    {{- $img = $img.Resize "150x150" }}
+                {{- end }}
+            {{- end }}
+            <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+                height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+        {{- else }}
+        <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+            height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+        {{- end }}
+        {{- end }}
+        <h1>{{ .title | default site.Title | markdownify }}</h1>
+        <span>{{ .subtitle | markdownify }}</span>
+        {{- partial "social_icons.html" -}}
+
+        {{- with .buttons }}
+        <div class="buttons">
+            {{- range . }}
+            <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name }}">
+                <span class="button-inner">
+                    {{ .name }}
+                    {{- if (findRE "://" .url) }}&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="14" width="14">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                    {{- end }}
+                </span>
+            </a>
+            {{- end }}
+        </div>
+        {{- end }}
+
+        <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(145deg, rgba(var(--primary-rgb), 0.08), rgba(var(--primary-rgb), 0.02)); border: 1px solid var(--primary); border-radius: 12px; max-width: 500px; box-shadow: 0 0 14px rgba(var(--primary-rgb), 0.25);">
+          <h3 style="margin-top: 0; margin-bottom: 1rem; font-size: 1.2rem; display: flex; align-items: center; gap: 8px; text-shadow: 0 0 8px rgba(var(--primary-rgb), 0.45);">🎛️ Boombox & Admin Command Tool</h3>
+          <input type="text" id="cmdInputProfile" placeholder="Enter Song ID here..." style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #555; background: var(--entry); color: var(--primary); font-family: monospace;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <button onclick="showGuideProfile()" style="padding: 12px; background: var(--primary); color: var(--theme); border: none; border-radius: 8px; cursor: pointer; font-weight: bold; box-shadow: 0 0 10px rgba(var(--primary-rgb), 0.4);">📖 How to Use?</button>
+            <button onclick="copyAdminCommandProfile()" style="padding: 12px; background: transparent; border: 2px solid var(--primary); color: var(--primary); border-radius: 8px; cursor: pointer; font-weight: bold; text-shadow: 0 0 6px rgba(var(--primary-rgb), 0.35);">📢 Copy Command</button>
+          </div>
+          <p id="dynamicGuideProfile" style="font-size: 0.85rem; margin-top: 10px; opacity: 0.85;">To play this song, equip your Boombox, click it, and paste <strong>[ID]</strong>. Or type <strong>:music [ID]</strong> in the game chat if you have admin perms.</p>
+          <p id="copyStatusProfile" style="font-size: 0.8rem; opacity: 0.8; margin-top: 6px; text-align: center;"></p>
+        </div>
+    </div>
+    {{- end}}
+</div>
+
+<div id="guideModalProfile" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; justify-content: center; align-items: center;">
+  <div style="background: var(--entry); padding: 30px; border-radius: 15px; border: 2px solid var(--primary); max-width: 90%; width: 420px; text-align: left; position: relative; box-shadow: 0 0 18px rgba(var(--primary-rgb), 0.35);">
+    <h3 style="margin-top: 0; color: var(--primary);">🚀 Quick Start Guide</h3>
+    <div style="margin: 20px 0; color: var(--primary);">
+      <p><strong>Step 1:</strong> Equip your Boombox/Radio.</p>
+      <p><strong>Step 2:</strong> Tap it to open the window.</p>
+      <p><strong>Step 3:</strong> Paste this specific ID:</p>
+      <div style="background: #000; padding: 10px; border-radius: 5px; text-align: center; margin: 10px 0; border: 1px dashed #555;">
+        <span id="guideDynamicIDProfile" style="font-family: monospace; font-size: 1.5rem; color: #00f3ff; font-weight: bold;">---</span>
+      </div>
+      <p><strong>Step 4:</strong> Hit <strong>PLAY</strong> and enjoy!</p>
+    </div>
+    <button onclick="closeGuideProfile()" style="width: 100%; padding: 10px; background: var(--primary); border: none; color: var(--theme); font-weight: bold; cursor: pointer; border-radius: 5px;">Got it!</button>
+  </div>
+</div>
+
+<script>
+function getIdProfile() {
+  const v = String(document.getElementById('cmdInputProfile').value || '').trim();
+  const m = v.match(/\d+/);
+  return m ? m[0] : '';
+}
+function copyTextProfile(text) {
+  if (!text) return Promise.reject();
+  if (navigator.clipboard && window.isSecureContext) {
+    return navigator.clipboard.writeText(text);
+  }
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.top = '-1000px';
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  let ok = false;
+  try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+  document.body.removeChild(ta);
+  return ok ? Promise.resolve() : Promise.reject();
+}
+function setStatusProfile(msg) {
+  const el = document.getElementById('copyStatusProfile');
+  el.textContent = msg || '';
+}
+function updateGuideProfile() {
+  const id = getIdProfile();
+  const g = document.getElementById('dynamicGuideProfile');
+  const shown = id || '[ID]';
+  g.innerHTML = `To play this song, equip your Boombox, click it, and paste <strong>${shown}</strong>. Or type <strong>:music ${shown}</strong> in the game chat if you have admin perms.`;
+}
+function copyAdminCommandProfile() {
+  const id = getIdProfile();
+  if (!id) { setStatusProfile('Please enter a numeric ID.'); return; }
+  const cmd = `:music ${id}`;
+  copyTextProfile(cmd).then(function(){ setStatusProfile('Command Copied! Type it in chat.'); }).catch(function(){ setStatusProfile('Copy failed. Please copy manually.'); });
+}
+function showGuideProfile() {
+  const val = String(document.getElementById('cmdInputProfile').value || '').trim();
+  if (!val) { setStatusProfile('Please enter a numeric ID.'); return; }
+  document.getElementById('guideDynamicIDProfile').innerText = getIdProfile() || val;
+  document.getElementById('guideModalProfile').style.display = 'flex';
+}
+function closeGuideProfile() {
+  document.getElementById('guideModalProfile').style.display = 'none';
+}
+document.getElementById('cmdInputProfile').addEventListener('input', updateGuideProfile);
+updateGuideProfile();
+</script>
