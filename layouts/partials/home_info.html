@@ -7,13 +7,18 @@
         {{ .Content | markdownify }}
     </div>
 
-    <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(var(--primary-rgb), 0.1); border: 1px solid var(--primary); border-radius: 12px; max-width: 400px; margin-left: auto; margin-right: auto;">
+    <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(var(--primary-rgb), 0.1); border: 1px solid var(--primary); border-radius: 12px; max-width: 520px; margin-left: auto; margin-right: auto;">
       <h3 style="margin-top: 0; margin-bottom: 1rem; font-size: 1.2rem;">🔍 Verify Roblox ID</h3>
       <div style="display: flex; gap: 10px;">
-        <input type="number" id="robloxIdInput" placeholder="Enter ID (e.g. 123456)" style="flex: 1; padding: 10px; border-radius: 6px; border: 1px solid #ccc; background: var(--entry); color: var(--primary);">
+        <input type="number" id="robloxIdInput" placeholder="Enter ID (e.g. 524388229)" style="flex: 1; padding: 10px; border-radius: 6px; border: 1px solid #ccc; background: var(--entry); color: var(--primary);">
+        <select id="robloxIdEndpoint" aria-label="Endpoint" style="padding: 10px; border-radius: 6px; border: 1px solid #ccc; background: var(--entry); color: var(--primary);">
+          <option value="marketplace" selected>Marketplace</option>
+          <option value="catalog">Catalog</option>
+          <option value="library">Library</option>
+        </select>
         <button onclick="verifyRobloxId()" style="padding: 10px 20px; background: var(--primary); color: var(--theme); border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Check</button>
       </div>
-      <p style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.5rem; margin-bottom: 0;">Opens official Roblox library page to check status.</p>
+      <p style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.5rem; margin-bottom: 0;">Opens official Roblox asset page. Try another endpoint if not found.</p>
     </div>
 
     <footer class="entry-footer">
@@ -23,12 +28,22 @@
 
 <script>
 function verifyRobloxId() {
-  const id = document.getElementById('robloxIdInput').value;
-  if (id) {
-    window.open(`https://www.roblox.com/library/${id}`, '_blank');
-  } else {
+  const idRaw = document.getElementById('robloxIdInput').value;
+  const endpoint = document.getElementById('robloxIdEndpoint').value;
+  const id = String(idRaw).trim();
+  if (!id) {
     alert('Please enter a valid ID first!');
+    return;
   }
+  let url = '';
+  if (endpoint === 'marketplace') {
+    url = `https://create.roblox.com/marketplace/asset/${id}`;
+  } else if (endpoint === 'catalog') {
+    url = `https://www.roblox.com/catalog/${id}`;
+  } else {
+    url = `https://www.roblox.com/library/${id}`;
+  }
+  window.open(url, '_blank');
 }
 </script>
 {{- end -}}
