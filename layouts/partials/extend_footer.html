@@ -1,27 +1,28 @@
 <!-- Cyberpunk Music Widget -->
-<div id="music-widget" style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; display: flex; align-items: center; gap: 10px; background: rgba(0, 0, 0, 0.8); padding: 10px; border-radius: 50px; border: 2px solid #00f3ff; box-shadow: 0 0 10px #00f3ff; transition: all 0.3s ease;">
+<div id="music-widget" style="position: fixed; bottom: 16px; left: 16px; z-index: 9999; display: flex; align-items: center; gap: 8px; background: transparent; padding: 4px; border-radius: 8px; border: none; box-shadow: none; transition: all 0.3s ease;">
   <!-- Play/Pause Button with Vinyl Animation -->
   <div id="play-btn" onclick="toggleMusic()" style="width: 40px; height: 40px; border-radius: 50%; background: #111; border: 2px solid #fff; cursor: pointer; position: relative; display: none; align-items: center; justify-content: center; animation: none;">
     <span id="play-icon" style="font-size: 14px; color: #fff;">▶</span>
   </div>
 
-  <!-- Scrolling Text -->
-  <div style="display: none;" id="music-info">
-    <span style="color: #00f3ff; font-family: monospace; font-size: 12px;">🎵 Lo-fi Gaming Chill Beats</span>
-  </div>
-
   <audio id="bg-music" loop></audio>
-
-  <div class="turntable" style="display:flex; align-items:center; gap:12px;">
-    <div class="deck" style="position:relative; width:160px; height:110px; background: linear-gradient(145deg, #0d0d0d, #1a1a1a); border: 1px solid #2af5ff; border-radius: 12px; box-shadow: inset 0 0 8px rgba(0,243,255,0.3), 0 0 12px rgba(0,243,255,0.4); display:flex; align-items:center; justify-content:center;">
-      <div class="disc" style="width:86px; height:86px; border-radius:50%; background: radial-gradient(circle at 30% 30%, #202020 0%, #121212 40%, #0a0a0a 70%, #090909 100%); box-shadow: 0 0 10px rgba(0,243,255,0.2), inset 0 0 6px rgba(255,255,255,0.06); position:relative;"></div>
-      <div class="spindle" style="position:absolute; width:8px; height:8px; border-radius:50%; background:#e33; box-shadow: 0 0 6px #e33;">
-      </div>
-      <div id="tonearm" style="position:absolute; width:90px; height:6px; background: linear-gradient(90deg, #cfcfcf, #8b8b8b); top:22px; right:10px; transform-origin: 6px 3px; transform: rotate(-32deg); transition: transform 0.25s ease; border-radius:3px; box-shadow: 0 0 6px rgba(255,255,255,0.2); cursor:pointer;"></div>
+  <div class="turntable" style="display:flex; align-items:center; gap:8px;">
+    <div class="deck" style="position:relative; width:72px; height:72px; display:flex; align-items:center; justify-content:center;">
+      <div class="disc" style="width:64px; height:64px; border-radius:50%; background: radial-gradient(circle at 30% 30%, #202020 0%, #121212 40%, #0a0a0a 70%, #090909 100%); box-shadow: inset 0 0 6px rgba(255,255,255,0.06); position:relative;"></div>
+      <div class="spindle" style="position:absolute; width:6px; height:6px; border-radius:50%; background:#e33; box-shadow: 0 0 6px #e33;"></div>
+      <div id="tonearm" style="position:absolute; width:70px; height:5px; background: linear-gradient(90deg, #cfcfcf, #8b8b8b); top:4px; right:-6px; transform-origin: 6px 2.5px; transform: rotate(-32deg); transition: transform 0.25s ease; border-radius:3px; box-shadow: 0 0 6px rgba(255,255,255,0.2); cursor:pointer;"></div>
+      <span id="play-hint" style="position:absolute; top:74px; left:0; font-size:10px; color:#00f3ff; opacity:0.9;">Click needle to play</span>
     </div>
-    <div class="ctrl" style="display:flex; align-items:center; gap:6px;">
-      <input id="music-url" type="text" placeholder="输入音频链接" style="width:180px; height:28px; background:#0f0f0f; color:#00f3ff; border:1px solid #00f3ff; border-radius:6px; padding:0 8px; outline:none;" />
-      <button id="load-btn" style="height:28px; padding:0 10px; background:#111; color:#00f3ff; border:1px solid #00f3ff; border-radius:6px; cursor:pointer;">播放</button>
+    <button id="expand-btn" aria-label="Expand player" style="width:22px; height:22px; border:none; background:transparent; color:#00f3ff; cursor:pointer; font-size:16px; line-height:22px;">▶</button>
+    <div id="controls" style="display:none; align-items:center; gap:6px;">
+      <input id="music-url" type="text" placeholder="Enter audio URL" style="width:200px; height:26px; background:#0f0f0f; color:#00f3ff; border:1px solid #00f3ff; border-radius:6px; padding:0 8px; outline:none;" />
+      <button id="load-btn" style="height:26px; padding:0 10px; background:#111; color:#00f3ff; border:1px solid #00f3ff; border-radius:6px; cursor:pointer;">Play</button>
+      <input id="volume" type="range" min="0" max="100" value="80" style="width:80px;" />
+      <button id="mute-btn" style="height:26px; padding:0 8px; background:#111; color:#00f3ff; border:1px solid #00f3ff; border-radius:6px; cursor:pointer;">Mute</button>
+      <input id="progress" type="range" min="0" max="100" value="0" style="width:120px;" />
+      <span id="time" style="font-size:12px; color:#00f3ff;">00:00 / 00:00</span>
+      <span id="recent-label" style="font-size:12px; color:#00f3ff;">Recent:</span>
+      <span id="playlist" style="display:flex; gap:6px; flex-wrap:wrap;"></span>
     </div>
   </div>
 </div>
@@ -31,19 +32,59 @@
   const audio = document.getElementById('bg-music');
   const tonearm = document.getElementById('tonearm');
   const disc = musicWidget.querySelector('.disc');
+  const hint = document.getElementById('play-hint');
+  const expandBtn = document.getElementById('expand-btn');
+  const controls = document.getElementById('controls');
   const urlInput = document.getElementById('music-url');
   const loadBtn = document.getElementById('load-btn');
+  const vol = document.getElementById('volume');
+  const muteBtn = document.getElementById('mute-btn');
+  const progress = document.getElementById('progress');
+  const time = document.getElementById('time');
+  const playlistEl = document.getElementById('playlist');
   let isPlaying = false;
+  let hasPlayedOnce = false;
 
   const defaultSrc = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
   audio.src = defaultSrc;
   audio.preload = 'none';
+  audio.crossOrigin = 'anonymous';
+
+  const LS_KEY = 'music_recent_urls';
+  function fmt(s) {
+    const m = Math.floor(s / 60).toString().padStart(2, '0');
+    const sec = Math.floor(s % 60).toString().padStart(2, '0');
+    return `${m}:${sec}`;
+  }
+  function setTime() {
+    const d = isFinite(audio.duration) ? audio.duration : 0;
+    time.textContent = `${fmt(audio.currentTime)} / ${fmt(d)}`;
+  }
+  function renderPlaylist() {
+    const arr = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+    playlistEl.innerHTML = '';
+    arr.slice(0,5).forEach((url) => {
+      const a = document.createElement('button');
+      a.textContent = '•';
+      a.title = url;
+      a.style.cssText = 'background:#111;color:#00f3ff;border:1px solid #00f3ff;border-radius:6px;cursor:pointer;height:22px;min-width:22px;';
+      a.addEventListener('click', () => {
+        urlInput.value = url;
+        if (audio.src !== url) audio.src = url;
+        audio.load();
+        play();
+      });
+      playlistEl.appendChild(a);
+    });
+  }
+  renderPlaylist();
 
   function play() {
     audio.play().then(() => {
       isPlaying = true;
       disc.classList.add('spin');
       tonearm.classList.add('down');
+      if (!hasPlayedOnce) { hasPlayedOnce = true; hint.style.display = 'none'; }
     }).catch(() => {});
   }
 
@@ -59,12 +100,21 @@
   }
 
   tonearm.addEventListener('click', toggleMusic);
+  expandBtn.addEventListener('click', () => {
+    const shown = controls.style.display === 'flex';
+    controls.style.display = shown ? 'none' : 'flex';
+    expandBtn.textContent = shown ? '▶' : '✕';
+  });
   loadBtn.addEventListener('click', () => {
     const v = urlInput.value.trim();
     if (!v) return;
     if (audio.src !== v) audio.src = v;
     audio.load();
     play();
+    const arr = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+    const next = [v, ...arr.filter((u) => u !== v)];
+    localStorage.setItem(LS_KEY, JSON.stringify(next.slice(0,20)));
+    renderPlaylist();
   });
   urlInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
@@ -73,6 +123,21 @@
   });
   audio.addEventListener('ended', () => pause());
   audio.addEventListener('error', () => pause());
+  audio.addEventListener('loadedmetadata', () => { setTime(); });
+  audio.addEventListener('timeupdate', () => {
+    setTime();
+    if (isFinite(audio.duration) && audio.duration > 0) {
+      progress.value = Math.floor((audio.currentTime / audio.duration) * 100);
+    }
+  });
+  vol.addEventListener('input', () => { audio.volume = Math.min(1, Math.max(0, vol.value / 100)); });
+  muteBtn.addEventListener('click', () => { audio.muted = !audio.muted; muteBtn.textContent = audio.muted ? 'Unmute' : 'Mute'; });
+  progress.addEventListener('input', () => {
+    if (isFinite(audio.duration) && audio.duration > 0) {
+      audio.currentTime = (progress.value / 100) * audio.duration;
+      setTime();
+    }
+  });
 </script>
 
 <style>
@@ -82,9 +147,11 @@
   }
   #music-widget .disc.spin { animation: spin 3s linear infinite; }
   #tonearm.down { transform: rotate(8deg); }
-  #music-widget:hover { box-shadow: 0 0 14px #00f3ff; }
+  #music-widget:hover { filter: drop-shadow(0 0 6px #00f3ff); }
+  #play-hint { animation: pulse 1.2s ease-in-out infinite; }
+  @keyframes pulse { 0%{opacity:0.35} 50%{opacity:0.95} 100%{opacity:0.35} }
   /* 移动端适配：变小一点 */
   @media (max-width: 768px) {
-    #music-widget { bottom: 10px; left: 10px; transform: scale(0.8); transform-origin: bottom left; }
+    #music-widget { bottom: 10px; left: 10px; transform: scale(0.85); transform-origin: bottom left; }
   }
 </style>
