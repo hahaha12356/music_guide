@@ -63,6 +63,7 @@
     (u) => `https://corsproxy.io/?${encodeURIComponent(u)}`,
   ];
   function isRemote(u) { return /^https?:\/\//i.test(u); }
+  function isAudioUrl(u) { return /\.(mp3|ogg|wav)(\?.*)?$/i.test(u) || /cdn\.pixabay\.com\/download\/audio\//i.test(u); }
   function normalizeUrl(u) {
     if (!/^https?:\/\//i.test(u)) return `https://${u}`;
     return u;
@@ -146,6 +147,11 @@
     const vRaw = urlInput.value.trim();
     const v = isRemote(vRaw) ? normalizeUrl(vRaw) : vRaw;
     if (!v) return;
+    if (isRemote(v) && !isAudioUrl(v)) {
+      errEl.textContent = 'Not an audio file URL. Use direct .mp3/.ogg/.wav';
+      errEl.style.display = 'inline';
+      return;
+    }
     originalUrl = v;
     proxyIndex = -1;
     audio.src = originalUrl;
@@ -209,6 +215,7 @@
   #play-hint { animation: pulse 1.2s ease-in-out infinite; }
   @keyframes pulse { 0%{opacity:0.35} 50%{opacity:0.95} 100%{opacity:0.35} }
   .deck .disc { z-index: 1; }
+  .deck .disc::after { content:''; position:absolute; inset:0; border-radius:50%; background: repeating-radial-gradient(circle, rgba(255,255,255,0.15) 0px, rgba(255,255,255,0.15) 1px, rgba(0,0,0,0) 2px, rgba(0,0,0,0) 6px); mix-blend-mode: screen; opacity:0.35; pointer-events:none; }
   #tonearm { z-index: 2; pointer-events: auto; }
   .disc .note { position:absolute; bottom: 12px; font-size:14px; color:#00f3ff; animation: noteUp 1.8s ease-out forwards; text-shadow:0 0 6px #00f3ff; }
   @keyframes noteUp { 0%{ transform: translateY(0) translateX(0) rotate(0deg); opacity:0.25; } 50%{ opacity:0.95; } 100%{ transform: translateY(-40px) translateX(-6px) rotate(15deg); opacity:0; } }
