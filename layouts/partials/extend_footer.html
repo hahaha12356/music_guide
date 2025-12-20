@@ -5,7 +5,7 @@
     <span id="play-icon" style="font-size: 14px; color: #fff;">▶</span>
   </div>
 
-  <audio id="bg-music" loop></audio>
+  <audio id="bg-music" loop playsinline></audio>
   <div class="turntable" style="display:flex; align-items:center; gap:8px;">
     <div class="deck" style="position:relative; width:72px; height:72px; display:flex; align-items:center; justify-content:center;">
       <div class="disc" style="width:64px; height:64px; border-radius:50%; background: radial-gradient(circle at 30% 30%, #202020 0%, #121212 40%, #0a0a0a 70%, #090909 100%); box-shadow: inset 0 0 6px rgba(255,255,255,0.06); position:relative;"></div>
@@ -47,7 +47,7 @@
 
   const defaultSrc = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
   audio.src = defaultSrc;
-  audio.preload = 'none';
+  audio.preload = 'auto';
   audio.crossOrigin = 'anonymous';
 
   const LS_KEY = 'music_recent_urls';
@@ -80,12 +80,14 @@
   renderPlaylist();
 
   function play() {
+    isPlaying = true;
+    disc.classList.add('spin');
+    tonearm.classList.add('down');
     audio.play().then(() => {
-      isPlaying = true;
-      disc.classList.add('spin');
-      tonearm.classList.add('down');
       if (!hasPlayedOnce) { hasPlayedOnce = true; hint.style.display = 'none'; }
-    }).catch(() => {});
+    }).catch(() => {
+      pause();
+    });
   }
 
   function pause() {
@@ -130,7 +132,10 @@
       progress.value = Math.floor((audio.currentTime / audio.duration) * 100);
     }
   });
+  audio.addEventListener('play', () => { isPlaying = true; disc.classList.add('spin'); tonearm.classList.add('down'); });
+  audio.addEventListener('pause', () => { isPlaying = false; disc.classList.remove('spin'); tonearm.classList.remove('down'); });
   vol.addEventListener('input', () => { audio.volume = Math.min(1, Math.max(0, vol.value / 100)); });
+  audio.volume = Math.min(1, Math.max(0, (parseInt(vol.value || '80', 10)) / 100));
   muteBtn.addEventListener('click', () => { audio.muted = !audio.muted; muteBtn.textContent = audio.muted ? 'Unmute' : 'Mute'; });
   progress.addEventListener('input', () => {
     if (isFinite(audio.duration) && audio.duration > 0) {
@@ -150,6 +155,8 @@
   #music-widget:hover { filter: drop-shadow(0 0 6px #00f3ff); }
   #play-hint { animation: pulse 1.2s ease-in-out infinite; }
   @keyframes pulse { 0%{opacity:0.35} 50%{opacity:0.95} 100%{opacity:0.35} }
+  .deck .disc { z-index: 1; }
+  #tonearm { z-index: 2; pointer-events: auto; }
   /* 移动端适配：变小一点 */
   @media (max-width: 768px) {
     #music-widget { bottom: 10px; left: 10px; transform: scale(0.85); transform-origin: bottom left; }
