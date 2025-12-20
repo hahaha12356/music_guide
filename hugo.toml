@@ -48,6 +48,10 @@ home = ["HTML", "RSS", "JSON"]
         imageWidth = 120
         imageHeight = 120
 
+    [params.homeInfoParams]
+        Title = "Welcome to MusicGuide.life"
+        Content = "探索 Roblox 音频 ID、FNF Mods 与游戏原声。使用下方工具快速验证 Roblox ID。"
+
     # 搜索配置 (Fuse.js)
     [params.fuseOpts]
         isCaseSensitive = false
