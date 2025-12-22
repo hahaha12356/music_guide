@@ -1,8 +1,8 @@
 ---
 title: "How to Change Keybinds in Friday Night Funkin (Easy Fix)"
-date: 2025-12-21
+date: 2025-12-21 
 draft: false
-categories: ["FNF Mods"]
+categories: ["FNF"]
 tags: ["Gaming", "Music", "FNF Keybinds"]
 description: "Struggling with arrow keys? Learn the fastest way to change your FNF Keybinds and optimize your layout for high-speed charts. Updated 2025."
 ---

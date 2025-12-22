@@ -1,8 +1,8 @@
 ---
 title: "FNF vs Sonic.EXE: Download & Secret Endings Guide"
-date: 2025-12-21
+date: 2025-12-21 
 draft: false
-categories: ["FNF Mods"]
+categories: ["FNF"]
 tags: ["Gaming", "Music", "FNF Sonic.EXE Guide"]
 description: "Stuck on the sound test menu? Our complete FNF Sonic.EXE Guide covers all PCM codes, secret songs, and installation steps for the Restored builds. Updated 2025."
 ---

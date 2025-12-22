@@ -1,8 +1,8 @@
 ---
 title: "Top 10 Hardest FNF Mods Ranked (Impossible difficulty)"
-date: 2025-12-21
+date: 2025-12-21 
 draft: false
-categories: ["FNF Mods"]
+categories: ["FNF"]
 tags: ["Gaming", "Music", "Hardest FNF Mods"]
 description: "Think you have fast fingers? We ranked the absolute Hardest FNF Mods that will shatter your keyboard and your ego. Updated 2025."
 ---
