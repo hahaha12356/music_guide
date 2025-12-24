@@ -7,7 +7,7 @@ tags: ["Gaming", "Music", "FNF Sonic.EXE Guide"]
 description: "Stuck on the sound test menu? Our complete FNF Sonic.EXE Guide covers all PCM codes, secret songs, and installation steps for the Restored builds. Updated 2025."
 ---
 
-!["FNF Sonic.EXE Secret Endings"](fnf-vs-sonic.exe-secret-endings.jpg)
+!["FNF Sonic.EXE Secret Endings"](/images/exe-secret-endings.jpg)
 
 ## Introduction
 If you are looking for the most comprehensive **FNF Sonic.EXE Guide** on the web, you’ve probably realized by now that this isn't just a standard mod—it is a piece of gaming history wrapped in a labyrinth of code. I remember when the original 2.0 update dropped; the community collectively lost its mind over the sheer quality and the cryptic secrets hidden behind the "Sound Test" menu. Even now, in late 2025, with all the fan restorations and "Rerun" updates, navigating the secrets of the executable can be confusing for newcomers. Whether you are trying to unlock Majin Sonic or figure out why Lord X is draining your health, I’ve broken down the technical steps to ensure you see every ending without crashing your PC.
