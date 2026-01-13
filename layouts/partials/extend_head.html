@@ -2,41 +2,147 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBNG4SJLZ5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);} 
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
   gtag('config', 'G-SBNG4SJLZ5');
 </script>
 
-<!-- Adsterra Direct Link (Popunder) -->
-<script>
-  (function() {
-    const adLink = 'https://www.effectivegatecpm.com/ii5ad6r4?key=d18b51569c5fafe364090c46e62e05b2';
-    const triggerPop = () => {
-      if (!window._as_triggered) {
-        window.open(adLink, '_blank');
-        window._as_triggered = true;
-        document.removeEventListener('click', triggerPop);
-      }
-    };
-    document.addEventListener('click', triggerPop);
-  })();
-</script>
+<!-- Adsterra Popunder -->
+<script type='text/javascript'
+  src='//pl28468097.effectivegatecpm.com/10/b6/a0/bc1qegs33nwzy04dt0yy5hs9j0c24armj6q9wvdvs3.js'></script>
 
+<!-- Adsterra Smartlink (Direct Link) Config -->
+{{- if site.Params.adsterra_link }}
+<link rel="preconnect" href="https://www.effectivegatecpm.com">
+{{- end }}
 
 <style>
-  .main { background: transparent !important; }
-  .list { background: transparent !important; }
+  .main {
+    background: transparent !important;
+  }
+
+  .list {
+    background: transparent !important;
+  }
 </style>
 
 {{- with site.Params.backgroundLight }}
 <style>
   html[data-theme="light"] body {
-    {{- with .color }}background-color: {{ . }} !important;{{ end }}
-    {{- with .image }}background-image: linear-gradient(rgba(255,255,255,0.99), rgba(255,255,255,0.7)), url('{{ . | absURL }}') !important;{{ end }}
-    {{- with .position }}background-position: {{ . }} !important;{{ end }}
-    {{- with .size }}background-size: {{ . }} !important;{{ end }}
-    {{- with .repeat }}background-repeat: {{ . }} !important;{{ end }}
-    {{- with .attachment }}background-attachment: {{ . }} !important;{{ end }}
+      {
+        {
+        - with .color
+      }
+    }
+
+    background-color: {
+        {
+        .
+      }
+    }
+
+    !important;
+
+      {
+        {
+        end
+      }
+    }
+
+      {
+        {
+        - with .image
+      }
+    }
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0.7)),
+    url('{{ . | absURL }}') !important;
+
+      {
+        {
+        end
+      }
+    }
+
+      {
+        {
+        - with .position
+      }
+    }
+
+    background-position: {
+        {
+        .
+      }
+    }
+
+    !important;
+
+      {
+        {
+        end
+      }
+    }
+
+      {
+        {
+        - with .size
+      }
+    }
+
+    background-size: {
+        {
+        .
+      }
+    }
+
+    !important;
+
+      {
+        {
+        end
+      }
+    }
+
+      {
+        {
+        - with .repeat
+      }
+    }
+
+    background-repeat: {
+        {
+        .
+      }
+    }
+
+    !important;
+
+      {
+        {
+        end
+      }
+    }
+
+      {
+        {
+        - with .attachment
+      }
+    }
+
+    background-attachment: {
+        {
+        .
+      }
+    }
+
+    !important;
+
+      {
+        {
+        end
+      }
+    }
   }
 </style>
 {{- end }}
@@ -44,12 +150,120 @@
 {{- with site.Params.backgroundDark }}
 <style>
   html[data-theme="dark"] body {
-    {{- with .color }}background-color: {{ . }} !important;{{ end }}
-    {{- with .image }}background-image: linear-gradient(rgba(0,0,0,0.99), rgba(0,0,0,0.7)), url('{{ . | absURL }}') !important;{{ end }}
-    {{- with .position }}background-position: {{ . }} !important;{{ end }}
-    {{- with .size }}background-size: {{ . }} !important;{{ end }}
-    {{- with .repeat }}background-repeat: {{ . }} !important;{{ end }}
-    {{- with .attachment }}background-attachment: {{ . }} !important;{{ end }}
+      {
+        {
+        - with .color
+      }
+    }
+
+    background-color: {
+        {
+        .
+      }
+    }
+
+    !important;
+
+      {
+        {
+        end
+      }
+    }
+
+      {
+        {
+        - with .image
+      }
+    }
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.99), rgba(0, 0, 0, 0.7)),
+    url('{{ . | absURL }}') !important;
+
+      {
+        {
+        end
+      }
+    }
+
+      {
+        {
+        - with .position
+      }
+    }
+
+    background-position: {
+        {
+        .
+      }
+    }
+
+    !important;
+
+      {
+        {
+        end
+      }
+    }
+
+      {
+        {
+        - with .size
+      }
+    }
+
+    background-size: {
+        {
+        .
+      }
+    }
+
+    !important;
+
+      {
+        {
+        end
+      }
+    }
+
+      {
+        {
+        - with .repeat
+      }
+    }
+
+    background-repeat: {
+        {
+        .
+      }
+    }
+
+    !important;
+
+      {
+        {
+        end
+      }
+    }
+
+      {
+        {
+        - with .attachment
+      }
+    }
+
+    background-attachment: {
+        {
+        .
+      }
+    }
+
+    !important;
+
+      {
+        {
+        end
+      }
+    }
   }
 </style>
 {{- end }}

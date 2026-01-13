@@ -320,21 +320,12 @@
     }
   }
 </style>
-<script>
-  (function () {
-    // Inject a banner at the bottom of the article
-    const adLink = 'https://www.effectivegatecpm.com/ii5ad6r4?key=d18b51569c5fafe364090c46e62e05b2';
-    const content = document.querySelector('.post-content');
-    if (content) {
-      const banner = document.createElement('div');
-      banner.style.cssText = 'margin: 20px 0; padding: 15px; background: rgba(var(--primary-rgb), 0.05); border: 2px dashed var(--primary); border-radius: 12px; text-align: center;';
-      banner.innerHTML = `
-        <p style="margin: 0 0 10px; font-size: 0.9rem; color: var(--secondary);">✨ Recommended for You</p>
-        <a href="${adLink}" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 10px 20px; background: var(--primary); color: var(--theme); border-radius: 8px; font-weight: bold; text-decoration: none; box-shadow: 0 0 10px rgba(var(--primary-rgb), 0.3);">
-          Explore Trending Music Tools 🚀
-        </a>
-      `;
-      content.appendChild(banner);
-    }
-  })();
-</script>
+{{- if site.Params.adsterra_link }}
+<div class="adsterra-banner" style="margin: 20px 0; text-align: center;">
+  <p style="font-size: 0.8rem; opacity: 0.6; margin-bottom: 8px;">Recommended</p>
+  <a href="{{ site.Params.adsterra_link }}" target="_blank" rel="noopener noreferrer"
+    style="display: inline-block; padding: 12px 24px; background: var(--primary); color: var(--theme); border-radius: 8px; font-weight: bold; text-decoration: none;">
+    🚀 Discover Gaming Music Tools
+  </a>
+</div>
+{{- end }}
