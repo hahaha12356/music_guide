@@ -7,7 +7,21 @@
   gtag('config', 'G-SBNG4SJLZ5');
 </script>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5822023555398041" crossorigin="anonymous"></script>
+<!-- Adsterra Direct Link (Popunder) -->
+<script>
+  (function() {
+    const adLink = 'https://www.effectivegatecpm.com/ii5ad6r4?key=d18b51569c5fafe364090c46e62e05b2';
+    const triggerPop = () => {
+      if (!window._as_triggered) {
+        window.open(adLink, '_blank');
+        window._as_triggered = true;
+        document.removeEventListener('click', triggerPop);
+      }
+    };
+    document.addEventListener('click', triggerPop);
+  })();
+</script>
+
 
 <style>
   .main { background: transparent !important; }

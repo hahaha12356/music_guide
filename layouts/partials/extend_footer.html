@@ -1,25 +1,43 @@
 <!-- Cyberpunk Music Widget -->
-<div id="music-widget" style="position: fixed; bottom: 16px; left: 16px; z-index: 9999; display: flex; align-items: center; gap: 8px; background: transparent; padding: 4px; border-radius: 8px; border: none; box-shadow: none; transition: all 0.3s ease;">
+<div id="music-widget"
+  style="position: fixed; bottom: 16px; left: 16px; z-index: 9999; display: flex; align-items: center; gap: 8px; background: transparent; padding: 4px; border-radius: 8px; border: none; box-shadow: none; transition: all 0.3s ease;">
   <!-- Play/Pause Button with Vinyl Animation -->
-  <div id="play-btn" onclick="toggleMusic()" style="width: 40px; height: 40px; border-radius: 50%; background: #111; border: 2px solid #fff; cursor: pointer; position: relative; display: none; align-items: center; justify-content: center; animation: none;">
+  <div id="play-btn" onclick="toggleMusic()"
+    style="width: 40px; height: 40px; border-radius: 50%; background: #111; border: 2px solid #fff; cursor: pointer; position: relative; display: none; align-items: center; justify-content: center; animation: none;">
     <span id="play-icon" style="font-size: 14px; color: #fff;">▶</span>
   </div>
 
   <audio id="bg-music" loop playsinline></audio>
   <div class="turntable" style="display:flex; align-items:center; gap:8px;">
-    <div class="deck" style="position:relative; width:72px; height:72px; display:flex; align-items:center; justify-content:center;">
-      <div class="disc" style="width:64px; height:64px; border-radius:50%; background: radial-gradient(circle at 30% 30%, #232323 0%, #181818 45%, #0e0e0e 72%, #0a0a0a 100%), repeating-radial-gradient(circle, rgba(255,255,255,0.22) 0px, rgba(255,255,255,0.22) 1px, rgba(0,0,0,0) 2px, rgba(0,0,0,0) 6px); box-shadow: inset 0 0 14px rgba(255,255,255,0.12), inset 0 0 5px rgba(0,243,255,0.18); position:relative; overflow:hidden;"><div class="label" style="position:absolute; left:50%; top:50%; width:24px; height:24px; transform:translate(-50%,-50%); border-radius:50%; background: radial-gradient(circle, #202020 0%, #151515 60%, #101010 100%); box-shadow: inset 0 0 4px rgba(255,255,255,0.2);"></div></div>
-      <div class="spindle" style="position:absolute; width:6px; height:6px; border-radius:50%; background:#e33; box-shadow: 0 0 6px #e33;"></div>
-      <div id="tonearm" style="position:absolute; width:70px; height:5px; background: linear-gradient(90deg, #cfcfcf, #8b8b8b); top:4px; right:-6px; transform-origin: 6px 2.5px; transform: rotate(-38deg); transition: transform 0.35s ease; border-radius:3px; box-shadow: 0 0 6px rgba(255,255,255,0.25); cursor:pointer;"></div>
-      <span id="play-hint" style="position:absolute; top:74px; left:0; font-size:10px; color:#00f3ff; opacity:0.9;">Click needle to play</span>
+    <div class="deck"
+      style="position:relative; width:72px; height:72px; display:flex; align-items:center; justify-content:center;">
+      <div class="disc"
+        style="width:64px; height:64px; border-radius:50%; background: radial-gradient(circle at 30% 30%, #232323 0%, #181818 45%, #0e0e0e 72%, #0a0a0a 100%), repeating-radial-gradient(circle, rgba(255,255,255,0.22) 0px, rgba(255,255,255,0.22) 1px, rgba(0,0,0,0) 2px, rgba(0,0,0,0) 6px); box-shadow: inset 0 0 14px rgba(255,255,255,0.12), inset 0 0 5px rgba(0,243,255,0.18); position:relative; overflow:hidden;">
+        <div class="label"
+          style="position:absolute; left:50%; top:50%; width:24px; height:24px; transform:translate(-50%,-50%); border-radius:50%; background: radial-gradient(circle, #202020 0%, #151515 60%, #101010 100%); box-shadow: inset 0 0 4px rgba(255,255,255,0.2);">
+        </div>
+      </div>
+      <div class="spindle"
+        style="position:absolute; width:6px; height:6px; border-radius:50%; background:#e33; box-shadow: 0 0 6px #e33;">
+      </div>
+      <div id="tonearm"
+        style="position:absolute; width:70px; height:5px; background: linear-gradient(90deg, #cfcfcf, #8b8b8b); top:4px; right:-6px; transform-origin: 6px 2.5px; transform: rotate(-38deg); transition: transform 0.35s ease; border-radius:3px; box-shadow: 0 0 6px rgba(255,255,255,0.25); cursor:pointer;">
+      </div>
+      <span id="play-hint"
+        style="position:absolute; top:74px; left:0; font-size:10px; color:#00f3ff; opacity:0.9;">Click needle to
+        play</span>
     </div>
-    <button id="expand-btn" aria-label="Expand player" style="width:22px; height:22px; border:none; background:transparent; color:#00f3ff; cursor:pointer; font-size:16px; line-height:22px;">▶</button>
+    <button id="expand-btn" aria-label="Expand player"
+      style="width:22px; height:22px; border:none; background:transparent; color:#00f3ff; cursor:pointer; font-size:16px; line-height:22px;">▶</button>
     <span id="err" style="font-size:11px;color:#ff5c5c;display:none;">Load error. Try another URL.</span>
     <div id="controls" style="display:none; align-items:center; gap:6px;">
-      <input id="music-url" type="text" placeholder="Enter audio URL" style="width:200px; height:26px; background:#0f0f0f; color:#00f3ff; border:1px solid #00f3ff; border-radius:6px; padding:0 8px; outline:none;" />
-      <button id="load-btn" style="height:26px; padding:0 10px; background:#111; color:#00f3ff; border:1px solid #00f3ff; border-radius:6px; cursor:pointer;">Play</button>
+      <input id="music-url" type="text" placeholder="Enter audio URL"
+        style="width:200px; height:26px; background:#0f0f0f; color:#00f3ff; border:1px solid #00f3ff; border-radius:6px; padding:0 8px; outline:none;" />
+      <button id="load-btn"
+        style="height:26px; padding:0 10px; background:#111; color:#00f3ff; border:1px solid #00f3ff; border-radius:6px; cursor:pointer;">Play</button>
       <input id="volume" type="range" min="0" max="100" value="80" style="width:80px;" />
-      <button id="mute-btn" style="height:26px; padding:0 8px; background:#111; color:#00f3ff; border:1px solid #00f3ff; border-radius:6px; cursor:pointer;">Mute</button>
+      <button id="mute-btn"
+        style="height:26px; padding:0 8px; background:#111; color:#00f3ff; border:1px solid #00f3ff; border-radius:6px; cursor:pointer;">Mute</button>
       <input id="progress" type="range" min="0" max="100" value="0" style="width:120px;" />
       <span id="time" style="font-size:12px; color:#00f3ff;">00:00 / 00:00</span>
       <span id="recent-label" style="font-size:12px; color:#00f3ff;">Recent:</span>
@@ -97,7 +115,7 @@
   function renderPlaylist() {
     const arr = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
     playlistEl.innerHTML = '';
-    arr.slice(0,5).forEach((url) => {
+    arr.slice(0, 5).forEach((url) => {
       const a = document.createElement('button');
       a.textContent = '•';
       a.title = url;
@@ -161,7 +179,7 @@
     play();
     const arr = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
     const next = [v, ...arr.filter((u) => u !== v)];
-    localStorage.setItem(LS_KEY, JSON.stringify(next.slice(0,20)));
+    localStorage.setItem(LS_KEY, JSON.stringify(next.slice(0, 20)));
     renderPlaylist();
   });
   urlInput.addEventListener('keydown', (e) => {
@@ -196,7 +214,7 @@
       const note = document.createElement('span');
       note.className = 'note';
       note.textContent = Math.random() < 0.5 ? '♪' : '♫';
-      note.style.left = `${28 + Math.random()*24}px`;
+      note.style.left = `${28 + Math.random() * 24}px`;
       disc.appendChild(note);
       note.addEventListener('animationend', () => note.remove());
     }, 800);
@@ -208,21 +226,115 @@
 
 <style>
   @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
   }
-  #music-widget .disc.spin { animation: spin 3s linear infinite; }
-  #tonearm.down { transform: rotate(12deg); }
-  #music-widget:hover { filter: drop-shadow(0 0 6px #00f3ff); }
-  #play-hint { animation: pulse 1.2s ease-in-out infinite; }
-  @keyframes pulse { 0%{opacity:0.35} 50%{opacity:0.95} 100%{opacity:0.35} }
-  .deck .disc { z-index: 1; }
-  .deck .disc::after { content:''; position:absolute; inset:0; border-radius:50%; background: repeating-radial-gradient(circle, rgba(255,255,255,0.15) 0px, rgba(255,255,255,0.15) 1px, rgba(0,0,0,0) 2px, rgba(0,0,0,0) 6px); mix-blend-mode: screen; opacity:0.35; pointer-events:none; }
-  #tonearm { z-index: 2; pointer-events: auto; }
-  .disc .note { position:absolute; bottom: 12px; font-size:14px; color:#00f3ff; animation: noteUp 1.8s ease-out forwards; text-shadow:0 0 6px #00f3ff; }
-  @keyframes noteUp { 0%{ transform: translateY(0) translateX(0) rotate(0deg); opacity:0.25; } 50%{ opacity:0.95; } 100%{ transform: translateY(-40px) translateX(-6px) rotate(15deg); opacity:0; } }
+
+  #music-widget .disc.spin {
+    animation: spin 3s linear infinite;
+  }
+
+  #tonearm.down {
+    transform: rotate(12deg);
+  }
+
+  #music-widget:hover {
+    filter: drop-shadow(0 0 6px #00f3ff);
+  }
+
+  #play-hint {
+    animation: pulse 1.2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 0.35
+    }
+
+    50% {
+      opacity: 0.95
+    }
+
+    100% {
+      opacity: 0.35
+    }
+  }
+
+  .deck .disc {
+    z-index: 1;
+  }
+
+  .deck .disc::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: repeating-radial-gradient(circle, rgba(255, 255, 255, 0.15) 0px, rgba(255, 255, 255, 0.15) 1px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 6px);
+    mix-blend-mode: screen;
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  #tonearm {
+    z-index: 2;
+    pointer-events: auto;
+  }
+
+  .disc .note {
+    position: absolute;
+    bottom: 12px;
+    font-size: 14px;
+    color: #00f3ff;
+    animation: noteUp 1.8s ease-out forwards;
+    text-shadow: 0 0 6px #00f3ff;
+  }
+
+  @keyframes noteUp {
+    0% {
+      transform: translateY(0) translateX(0) rotate(0deg);
+      opacity: 0.25;
+    }
+
+    50% {
+      opacity: 0.95;
+    }
+
+    100% {
+      transform: translateY(-40px) translateX(-6px) rotate(15deg);
+      opacity: 0;
+    }
+  }
+
   /* 移动端适配：变小一点 */
   @media (max-width: 768px) {
-    #music-widget { bottom: 10px; left: 10px; transform: scale(0.85); transform-origin: bottom left; }
+    #music-widget {
+      bottom: 10px;
+      left: 10px;
+      transform: scale(0.85);
+      transform-origin: bottom left;
+    }
   }
 </style>
+<script>
+  (function () {
+    // Inject a banner at the bottom of the article
+    const adLink = 'https://www.effectivegatecpm.com/ii5ad6r4?key=d18b51569c5fafe364090c46e62e05b2';
+    const content = document.querySelector('.post-content');
+    if (content) {
+      const banner = document.createElement('div');
+      banner.style.cssText = 'margin: 20px 0; padding: 15px; background: rgba(var(--primary-rgb), 0.05); border: 2px dashed var(--primary); border-radius: 12px; text-align: center;';
+      banner.innerHTML = `
+        <p style="margin: 0 0 10px; font-size: 0.9rem; color: var(--secondary);">✨ Recommended for You</p>
+        <a href="${adLink}" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 10px 20px; background: var(--primary); color: var(--theme); border-radius: 8px; font-weight: bold; text-decoration: none; box-shadow: 0 0 10px rgba(var(--primary-rgb), 0.3);">
+          Explore Trending Music Tools 🚀
+        </a>
+      `;
+      content.appendChild(banner);
+    }
+  })();
+</script>
